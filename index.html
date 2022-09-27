@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-   
+    <title>FIT 3179 A2</title>
+    <link rel="stylesheet" href="style.css">
 
     <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -12,10 +12,18 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 </head>
 <body>
-
+  <div class="header" >
+    <h1>
+      <span class="word">FORTUNE</span>
+      <span class="number">500</span>
+    </h1>
+</div>
+  
+  <br>
 <div id="vis"></div>
 <script type="text/javascript">
-  var spec = "https://joeechua.github.io/Week9_HW/ChloroplethMap.json";
+  //var spec="ChloroplethMap.json"
+  var spec = "https://joeechua.github.io/FIT3179_A2/ChloroplethMap.json";
 
   vegaEmbed('#vis', spec).then(function(result) {
   }).catch(console.error);

@@ -44,7 +44,7 @@
             "scale": {
               "type": "threshold",
               "domain": [20000,40000,60000, 80000, 100000, 120000],
-              "range": ["#94C58C","#64AD62", "#429B46", "#1A8828", "#0A6921", "#094F01", "#163832"]
+              "range": ["#64B6EE","#4C9ADD", "#427BD2", "#3364C0", "#2C43B0", "#1E2791", "#0B1D51"]
               }},
     "tooltip": [
       {"field": "hqstate", "type": "nominal", "title":"State"},
