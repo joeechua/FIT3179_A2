@@ -21,7 +21,7 @@
    "transform": [
       {"filter": "year_selection==null || year_selection == datum.year"}],
     "spec": {
-      "data": {"url": "https://raw.githubusercontent.com/joeechua/W9_HW/main/fortune_500_USA.csv"},
+      "data": {"url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv"},
       "mark": "bar",
       "encoding": {
         "x": {"field": {"repeat": "repeat"}, "bin": {"maxbins": 25}},
