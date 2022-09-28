@@ -30,7 +30,7 @@
         "type": "nominal",
         "scale": {
           "domain": ["yes", "no"],
-          "range": ["Red", "grey"]
+          "range": ["#960018", "grey"]
         },
         "legend": {
           "title": "Woman CEO",
