@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 450,
+    "height":400,
+    "title":"Top 10 Companies in USA",
+    "description": "Google's stock price over time.",
+    "data": {"url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv"},
+    "params": [
+      {
+        "name": "highlight",
+        "select": {"type": "point", "on": "mouseover"}
+      },
+      {"name": "select", "select": "point"}
+    ],
+     "transform": [{
+          "window": [{
+            "op": "rank",
+            "as": "r"
+          }],
+          "sort": [{ "field": "r", "order": "descending" }],
+          "groupby":["year"]
+        }, {
+          "filter": "datum.r <= 10"
+        }],
+    "mark": {
+      "type": "line",
+      "point":true
+    },
+    "encoding": {
+      "x": {"field": "year", "type": "nominal", "axis":{"domain": false}},
+      "y": {"field": "r", "type": "quantitative", "sort":"descending", "title": "US Rank", "axis":{"domain": false,"position":1}},
+      "detail": {"field": "name", "type": "nominal"},
+      "tooltip":[
+        {"field":"name"},
+        {"field":"profits"},
+        {"field": "rank", "title": "Overall Rank"},
+        {"field":"r", "title":"US Rank"}
+      ],
+      "strokeWidth": {
+        "condition": [
+          {
+            "param": "select",
+            "empty": false,
+            "value": 3
+          },
+          {
+            "param": "highlight",
+            "empty": false,
+            "value": 3
+          }
+        ],
+        "value": 3
+      },
+      "color":{
+        "condition":[
+          {
+            "param": "highlight",
+            "empty":false,
+            "value":"red"
+          }
+        ],
+        "value":"#01041D"
+      }
+    }
+  }
+  
