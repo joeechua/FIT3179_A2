@@ -34,6 +34,7 @@
       "mark": {"type": "text", "radiusOffset": 20}
     }],
     "encoding": {
+      "order":{"field":"employees", "type": "quantitative", "sort": "descending"},
       "theta": {"field": "employees", "type": "quantitative", "stack": true, "scale":{"type":"linear","rangeMax":4.7, "rangeMin":1.5708}},
       "radius": {"field": "employees", "scale": {"type": "sqrt", "zero": true, "rangeMin": 70}},
       "angle": {},

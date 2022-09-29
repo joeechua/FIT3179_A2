@@ -5,7 +5,7 @@
     "title":"Top 10 Companies in USA",
     "description": "Google's stock price over time.",
     "data": {"url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
-    "format": {"parse": {"year":"date"}} },
+    "format": {"parse": {"year":"number"}} },
     "params": [
       {
         "name": "highlight",

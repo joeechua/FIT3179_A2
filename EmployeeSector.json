@@ -29,6 +29,7 @@
         "filter": "datum.rank <= 10"
       }],
     "encoding": {
+      "order":{"field":"employees", "type": "quantitative", "sort": "descending"},
       "theta": {"field": "profits", "type": "quantitative", "stack":true, "scale":{"type":"linear","rangeMax":1.5708, "rangeMin":-1.5708}},
       "color": {"field": "sector", "type": "nominal", "legend": {
             "title": "Sector",
