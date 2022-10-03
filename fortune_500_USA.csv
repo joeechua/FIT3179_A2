@@ -16,14 +16,14 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 14,2019,37,Alphabet,Technology,Internet Services and Retailing,136819.0,23.4,30736.0,142.7,232792.0,98771,Mountain View,California,no,yes,no,yes,https://fortune.com/global500/2019/alphabet/
 15,2019,38,Cardinal Health,Health Care,Wholesalers: Health Care,136809.0,5.3,256.0,-80.1,39951.0,50200,Dublin,Ohio,no,yes,no,yes,https://fortune.com/global500/2019/cardinal-health/
 16,2019,40,Walgreens Boots Alliance,Food & Drug Stores,Food and Drug Stores,131537.0,11.3,5024.0,23.2,68124.0,299000,Deerfield,Illinois,no,yes,no,yes,https://fortune.com/global500/2019/walgreens-boots-alliance/
-17,2019,41,JPMorgan Chase & Co.,Financials,Banks: Commercial and Savings,131412.0,15.4,32474.0,32.9,2622532.0,256105,New York,New York,no,yes,no,yes,https://fortune.com/global500/2019/j-p-morgan-chase/
+17,2019,41,JPMorgan Chase,Financials,Banks: Commercial and Savings,131412.0,15.4,32474.0,32.9,2622532.0,256105,New York,New York,no,yes,no,yes,https://fortune.com/global500/2019/j-p-morgan-chase/
 18,2019,43,Verizon Communications,Telecommunications,Telecommunications,130863.0,3.8,15528.0,-48.4,264829.0,144500,New York,New York,no,yes,no,no,https://fortune.com/global500/2019/verizon/
 19,2019,47,Kroger,Food & Drug Stores,Food and Drug Stores,121162.0,-1.2,3110.0,63.1,38118.0,453000,Cincinnati,Ohio,no,yes,no,yes,https://fortune.com/global500/2019/kroger/
 20,2019,48,General Electric,Industrials,Industrial Machinery,120268.0,-1.6,-22355.0,0.0,309129.0,283000,Boston,Massachusetts,no,no,no,no,https://fortune.com/global500/2019/general-electric/
 21,2019,49,Fannie Mae,Financials,Diversified Financials,120101.0,6.9,15959.0,547.9,3418318.0,7400,Washington,District Of Columbia,no,yes,no,yes,https://fortune.com/global500/2019/fannie-mae/
 22,2019,54,Phillips 66,Energy,Petroleum Refining,114217.0,24.7,5595.0,9.6,54302.0,14200,Houston,Texas,no,yes,no,no,https://fortune.com/global500/2019/phillips-66/
 23,2019,57,Valero Energy,Energy,Petroleum Refining,111407.0,26.0,3122.0,-23.2,50155.0,10261,San Antonio,Texas,no,yes,no,yes,https://fortune.com/global500/2019/valero-energy/
-24,2019,58,Bank of America Corp.,Financials,Banks: Commercial and Savings,110584.0,10.3,28147.0,54.4,2354507.0,204489,Charlotte,North Carolina,no,yes,no,no,https://fortune.com/global500/2019/bank-of-america-corp/
+24,2019,58,Bank of America,Financials,Banks: Commercial and Savings,110584.0,10.3,28147.0,54.4,2354507.0,204489,Charlotte,North Carolina,no,yes,no,no,https://fortune.com/global500/2019/bank-of-america-corp/
 25,2019,60,Microsoft,Technology,Computer Software,110360.0,22.7,16571.0,-21.8,258848.0,131000,Redmond,Washington,no,yes,no,yes,https://fortune.com/global500/2019/microsoft/
 26,2019,62,Home Depot,Retailing,Specialty Retailers,108203.0,7.2,11121.0,28.9,44003.0,413000,Atlanta,Georgia,no,yes,no,no,https://fortune.com/global500/2019/home-depot/
 27,2019,68,Boeing,Aerospace & Defense,Aerospace and Defense,101127.0,8.3,10460.0,27.6,117359.0,153000,Chicago,Illinois,no,yes,no,yes,https://fortune.com/global500/2019/boeing/
@@ -34,7 +34,7 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 32,2019,79,Anthem,Health Care,Health Care: Insurance and Managed Care,92105.0,2.3,3750.0,-2.4,71571.0,63900,Indianapolis,Indiana,no,yes,yes,yes,https://fortune.com/global500/2019/anthem/
 33,2019,84,Dell Technologies,Technology,"Computers, Office Equipment",90621.0,15.2,-2310.0,0.0,111820.0,157000,Round Rock,Texas,no,no,no,yes,https://fortune.com/global500/2019/dell-technologies/
 34,2019,100,DuPont,Chemicals,Chemicals,85977.0,37.2,3844.0,163.3,188030.0,98000,Wilmington,Delaware,no,yes,no,no,https://fortune.com/global500/2019/dow-chemical/
-35,2019,108,State Farm Insurance Cos.,Financials,Insurance: Property and Casualty (Mutual),81732.2,4.3,8788.4,298.3,272518.4,56788,Bloomington,Illinois,no,yes,no,no,https://fortune.com/global500/2019/state-farm-insurance-cos/
+35,2019,108,State Farm Insurance,Financials,Insurance: Property and Casualty (Mutual),81732.2,4.3,8788.4,298.3,272518.4,56788,Bloomington,Illinois,no,yes,no,no,https://fortune.com/global500/2019/state-farm-insurance-cos/
 36,2019,109,Johnson & Johnson,Health Care,Pharmaceuticals,81581.0,6.7,15297.0,1076.7,152954.0,135100,New Brunswick,New Jersey,no,yes,no,yes,https://fortune.com/global500/2019/johnson-johnson/
 37,2019,114,International Business Machines,Technology,Information Technology Services,79591.0,0.6,8728.0,51.7,123382.0,381100,Armonk,New York,no,yes,yes,no,https://fortune.com/global500/2019/ibm/
 38,2019,122,Target,Retailing,General Merchandisers,75356.0,4.8,2937.0,0.1,41290.0,360000,Minneapolis,Minnesota,no,yes,no,yes,https://fortune.com/global500/2019/target/
@@ -50,7 +50,7 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 48,2019,154,PepsiCo,"Food, Beverages & Tobacco",Food Consumer Products,64661.0,1.8,12515.0,157.7,77648.0,267000,Purchase,New York,no,yes,no,yes,https://fortune.com/global500/2019/pepsico/
 49,2019,155,Archer Daniels Midland,"Food, Beverages & Tobacco",Food Production,64341.0,5.8,1810.0,13.5,40833.0,31600,Chicago,Illinois,no,yes,no,yes,https://fortune.com/global500/2019/archer-daniels-midland/
 50,2019,156,Prudential Financial,Financials,"Insurance: Life, Health (stock)",62992.0,5.5,4074.0,-48.2,815078.0,50492,Newark,New Jersey,no,yes,no,yes,https://fortune.com/global500/2019/prudential-financial/
-51,2019,165,Albertsons Cos.,Food & Drug Stores,Food and Drug Stores,60534.5,1.0,131.1,183.2,20776.6,267000,Boise,Idaho,no,yes,no,no,https://fortune.com/global500/2019/albertsons-cos/
+51,2019,165,Albertsons,Food & Drug Stores,Food and Drug Stores,60534.5,1.0,131.1,183.2,20776.6,267000,Boise,Idaho,no,yes,no,no,https://fortune.com/global500/2019/albertsons-cos/
 52,2019,168,Centene,Health Care,Health Care: Insurance and Managed Care,60116.0,23.8,900.0,8.7,30901.0,47300,St. Louis,Missouri,no,yes,no,yes,https://fortune.com/global500/2019/centene/
 53,2019,170,Walt Disney,Media,Entertainment,59434.0,7.8,12598.0,40.3,98598.0,201000,Burbank,California,no,yes,no,yes,https://fortune.com/global500/2019/disney/
 54,2019,172,Sysco,Wholesalers,Wholesalers: Food and Grocery,58727.3,6.1,1430.8,25.2,18070.4,67000,Houston,Texas,no,yes,no,yes,https://fortune.com/global500/2019/sysco/
@@ -103,10 +103,10 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 101,2019,391,Progressive,Financials,Insurance: Property and Casualty (Stock),31979.0,19.2,2615.3,64.3,46575.0,37346,Mayfield Village,Ohio,no,yes,yes,yes,https://fortune.com/global500/2019/progressive/
 102,2019,395,Coca-Cola,"Food, Beverages & Tobacco",Beverages,31856.0,-10.0,6434.0,415.5,83216.0,62600,Atlanta,Georgia,no,yes,no,yes,https://fortune.com/global500/2019/coca-cola/
 103,2019,400,USAA,Financials,Insurance: Property and Casualty (Stock),31367.8,4.5,2291.9,-5.4,158506.8,33689,San Antonio,Texas,no,yes,no,yes,https://fortune.com/global500/2019/usaa/
-104,2019,404,Hewlett Packard Enterprise,Technology,"Computers, Office Equipment",30852.0,6.9,1908.0,454.7,55493.0,60000,Palo Alto,California,no,yes,no,no,https://fortune.com/global500/2019/hewlett-packard-enterprise/
+104,2019,404,HP,Technology,"Computers, Office Equipment",30852.0,6.9,1908.0,454.7,55493.0,60000,Palo Alto,California,no,yes,no,no,https://fortune.com/global500/2019/hewlett-packard-enterprise/
 105,2019,408,Abbott Laboratories,Health Care,Medical Products and Equipment,30578.0,11.6,2368.0,396.4,67173.0,103000,Abbott Park,Illinois,no,yes,no,yes,https://fortune.com/global500/2019/abbott-laboratories/
 106,2019,409,Micron Technology,Technology,Semiconductors and Other Electronic Components,30391.0,49.5,14135.0,177.8,43376.0,36000,Boise,Idaho,yes,yes,no,yes,https://fortune.com/global500/2019/micron-technology/
-107,2019,413,Travelers Cos.,Financials,Insurance: Property and Casualty (Stock),30282.0,4.8,2523.0,22.7,104233.0,30400,New York,New York,no,yes,no,no,https://fortune.com/global500/2019/travelers-cos/
+107,2019,413,Travelers,Financials,Insurance: Property and Casualty (Stock),30282.0,4.8,2523.0,22.7,104233.0,30400,New York,New York,no,yes,no,no,https://fortune.com/global500/2019/travelers-cos/
 108,2019,416,Northrop Grumman,Aerospace & Defense,Aerospace and Defense,30095.0,16.6,3229.0,60.2,37653.0,85000,Falls Church,Virginia,no,yes,yes,yes,https://fortune.com/global500/2019/northrop-grumman/
 109,2019,421,Arrow Electronics,Wholesalers,Wholesalers: Electronics and Office Equipment,29676.8,10.7,716.2,78.2,17784.4,20100,Centennial,Colorado,no,yes,no,yes,https://fortune.com/global500/2019/arrow-electronics/
 110,2019,422,Philip Morris International,"Food, Beverages & Tobacco",Tobacco,29625.0,3.1,7911.0,31.1,39801.0,77400,New York,New York,no,yes,no,no,https://fortune.com/global500/2019/philip-morris-international/
@@ -158,7 +158,7 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 156,2020,114,State Farm Insurance,Financials,Insurance: Property and Casualty (Mutual),79395.0,-2.9,5592.7,-36.4,294823.2,57672,Bloomington,Illinois,no,yes,no,yes,https://fortune.com/company/state-farm-insurance-cos/global500/
 157,2020,117,Target,Retailing,General Merchandisers,78112.0,3.7,3281.0,11.7,42779.0,368000,Minneapolis,Minnesota,no,yes,no,yes,https://fortune.com/company/target/global500/
 158,2020,118,International Business Machines,Technology,Information Technology Services,77147.0,-3.1,9431.0,8.1,152186.0,383800,Armonk,New York,no,yes,no,yes,https://fortune.com/company/ibm/global500/
-159,2020,119,Raytheon Technologies,Aerospace & Defense,Aerospace & Defense,77046.0,15.9,5537.0,5.1,139716.0,243200,Waltham,Massachusetts,no,yes,no,yes,https://fortune.com/company/raytheon-technologies/global500/
+159,2020,119,Raytheon,Aerospace & Defense,Aerospace & Defense,77046.0,15.9,5537.0,5.1,139716.0,243200,Waltham,Massachusetts,no,yes,no,yes,https://fortune.com/company/raytheon-technologies/global500/
 160,2020,121,Boeing,Aerospace & Defense,Aerospace & Defense,76559.0,-24.3,-636.0,-106.1,133625.0,161100,Chicago,Illinois,no,no,no,yes,https://fortune.com/company/boeing/global500/
 161,2020,125,Freddie Mac,Financials,Diversified Financials,75125.0,2.1,7214.0,-21.9,2203623.0,6892,McLean,Virginia,no,yes,no,yes,https://fortune.com/company/freddie-mac/global500/
 162,2020,127,Centene,Health Care,Health Care: Insurance and Managed Care,74639.0,24.2,1321.0,46.8,40994.0,56600,St. Louis,Missouri,no,yes,no,yes,https://fortune.com/company/centene/global500/
@@ -166,7 +166,7 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 164,2020,137,Lowe's,Retailing,Specialty Retailers,72148.0,1.2,4281.0,85.0,39471.0,260000,Mooresville,North Carolina,no,yes,no,yes,https://fortune.com/company/lowes/global500/
 165,2020,138,Intel,Technology,Semiconductors and Other Electronic Components,71965.0,1.6,21048.0,0.0,136524.0,110800,Santa Clara,California,no,yes,no,yes,https://fortune.com/company/intel/global500/
 166,2020,141,U.S. Postal Service,Transportation,"Mail, Package, and Freight Delivery",71154.0,0.7,-8813.0,0.0,25633.0,565021,Washington,District Of Columbia,no,no,no,no,https://fortune.com/company/u-s-postal-service/global500/
-167,2020,144,Meta Platforms,Technology,Internet Services and Retailing,70697.0,26.6,18485.0,-16.4,133376.0,44942,Menlo Park,California,no,yes,no,yes,https://fortune.com/company/facebook/global500/
+167,2020,144,Facebook,Technology,Internet Services and Retailing,70697.0,26.6,18485.0,-16.4,133376.0,44942,Menlo Park,California,no,yes,no,yes,https://fortune.com/company/facebook/global500/
 168,2020,148,FedEx,Transportation,"Mail, Package, and Freight Delivery",69693.0,6.5,540.0,-88.2,54403.0,374198,Memphis,Tennessee,no,yes,no,yes,https://fortune.com/company/fedex/global500/
 169,2020,149,MetLife,Financials,"Insurance: Life, Health (stock)",69620.0,2.5,5899.0,15.1,740463.0,49000,New York,New York,no,yes,no,yes,https://fortune.com/company/metlife/global500/
 170,2020,150,Walt Disney,Media,Entertainment,69570.0,17.1,11054.0,-12.3,193984.0,223000,Burbank,California,no,yes,no,yes,https://fortune.com/company/disney/global500/
@@ -174,7 +174,7 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 172,2020,160,PepsiCo,"Food, Beverages & Tobacco",Food Consumer Products,67161.0,3.9,7314.0,-41.6,78547.0,267000,Purchase,New York,no,yes,no,no,https://fortune.com/company/pepsico/global500/
 173,2020,166,Humana,Health Care,Health Care: Insurance and Managed Care,64888.0,14.0,2707.0,60.8,29074.0,46000,Louisville,Kentucky,no,yes,no,yes,https://fortune.com/company/humana/global500/
 174,2020,167,Prudential Financial,Financials,"Insurance: Life, Health (stock)",64807.0,2.9,4186.0,2.7,896552.0,51511,Newark,New Jersey,no,yes,no,yes,https://fortune.com/company/prudential-financial/global500/
-175,2020,168,Archer Daniels Midland (ADM),"Food, Beverages & Tobacco",Food Production,64656.0,0.5,1379.0,-23.8,43997.0,38100,Chicago,Illinois,no,yes,no,yes,https://fortune.com/company/archer-daniels-midland/global500/
+175,2020,168,Archer Daniels Midland,"Food, Beverages & Tobacco",Food Production,64656.0,0.5,1379.0,-23.8,43997.0,38100,Chicago,Illinois,no,yes,no,yes,https://fortune.com/company/archer-daniels-midland/global500/
 176,2020,174,Albertsons,Food & Drug Stores,Food & Drug Stores,62455.0,3.2,466.4,255.8,24735.1,270000,Boise,Idaho,no,yes,no,yes,https://fortune.com/company/albertsons-cos/global500/
 177,2020,179,Sysco,Wholesalers,Wholesalers: Food and Grocery,60114.0,2.4,1674.3,17.0,17966.5,69000,Houston,Texas,no,yes,no,yes,https://fortune.com/company/sysco/global500/
 178,2020,182,Lockheed Martin,Aerospace & Defense,Aerospace & Defense,59812.0,11.3,6230.0,23.5,47528.0,110000,Bethesda,Maryland,no,yes,no,yes,https://fortune.com/company/lockheed-martin/global500/
@@ -230,7 +230,7 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 228,2020,393,CHS,"Food, Beverages & Tobacco",Food Production,31901.0,-2.4,829.9,7.0,16447.5,10703,Inver Grove Heights,Minnesota,no,yes,no,yes,https://fortune.com/company/chs/global500/
 229,2020,398,Travelers,Financials,Insurance: Property and Casualty (Stock),31581.0,4.3,2622.0,3.9,110122.0,30800,New York,New York,no,yes,no,yes,https://fortune.com/company/travelers-cos/global500/
 230,2020,420,Philip Morris International,"Food, Beverages & Tobacco",Tobacco,29805.0,0.6,7185.0,-9.2,42875.0,73500,New York,New York,no,yes,no,no,https://fortune.com/company/philip-morris-international/global500/
-231,2020,430,Hewlett Packard Enterprise,Technology,"Computers, Office Equipment",29135.0,-5.6,1049.0,-45.0,51803.0,61600,San Jose,California,no,yes,no,yes,https://fortune.com/company/hewlett-packard-enterprise/global500/
+231,2020,430,HP,Technology,"Computers, Office Equipment",29135.0,-5.6,1049.0,-45.0,51803.0,61600,San Jose,California,no,yes,no,yes,https://fortune.com/company/hewlett-packard-enterprise/global500/
 232,2020,440,Arrow Electronics,Wholesalers,Wholesalers: Electronics and Office Equipment,28917.0,-2.6,-204.1,-128.5,16400.8,19300,Centennial,Colorado,no,no,no,no,https://fortune.com/company/arrow-electronics/global500/
 233,2020,456,ViacomCBS,Media,Entertainment,27812.0,91.6,3308.0,68.8,49519.0,26280,New York,New York,yes,yes,no,yes,https://fortune.com/company/cbs/global500/
 234,2020,459,Dollar General,Retailing,Specialty Retailers,27754.0,8.3,1712.6,7.7,22825.1,143000,Goodlettsville,Tennessee,no,yes,no,yes,https://fortune.com/company/dollar-general/global500/
@@ -274,7 +274,7 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 272,2021,80,Lowe's,Retailing,Specialty Retailers,89597.0,24.2,5835.0,36.3,46735.0,280000,Mooresville,North Carolina,no,yes,no,yes,https://fortune.com/company/lowes/global500/
 273,2021,81,Marathon Petroleum,Energy,Petroleum Refining,88952.0,-28.7,-9826.0,-472.6,85158.0,57900,Findlay,Ohio,no,no,no,no,https://fortune.com/company/marathon-petroleum/global500/
 274,2021,82,Citigroup,Financials,Banks: Commercial and Savings,88839.0,-14.1,11047.0,-43.1,2260090.0,210153,New York,New York,no,yes,yes,yes,https://fortune.com/company/citigroup/global500/
-275,2021,86,Meta Platforms,Technology,Internet Services and Retailing,85965.0,21.6,29146.0,57.7,159316.0,58604,Menlo Park,California,no,yes,no,yes,https://fortune.com/company/facebook/global500/
+275,2021,86,Facebook,Technology,Internet Services and Retailing,85965.0,21.6,29146.0,57.7,159316.0,58604,Menlo Park,California,no,yes,no,yes,https://fortune.com/company/facebook/global500/
 276,2021,89,United Parcel Service,Transportation,"Mail, Package, and Freight Delivery",84628.0,14.2,1343.0,-69.8,62408.0,408255,Atlanta,Georgia,no,yes,yes,yes,https://fortune.com/company/ups/global500/
 277,2021,94,Johnson & Johnson,Health Care,Pharmaceuticals,82584.0,0.6,14714.0,-2.7,174894.0,134500,New Brunswick,New Jersey,no,yes,no,yes,https://fortune.com/company/johnson-johnson/global500/
 278,2021,103,Wells Fargo,Financials,Banks: Commercial and Savings,80303.0,-22.7,3301.0,-83.1,1955163.0,268531,San Francisco,California,no,yes,no,yes,https://fortune.com/company/wells-fargo/global500/
@@ -293,12 +293,12 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 291,2021,143,Phillips 66,Energy,Petroleum Refining,65494.0,-40.2,-3975.0,-229.2,54721.0,14300,Houston,Texas,no,no,no,no,https://fortune.com/company/phillips/global500/
 292,2021,144,Lockheed Martin,Aerospace & Defense,Aerospace & Defense,65398.0,9.3,6833.0,9.7,50710.0,114000,Bethesda,Maryland,no,yes,no,yes,https://fortune.com/company/lockheed-martin/global500/
 293,2021,145,Walt Disney,Media,Entertainment,65388.0,-6.0,-2864.0,-125.9,201549.0,203000,Burbank,California,no,no,no,no,https://fortune.com/company/disney/global500/
-294,2021,146,Archer Daniels Midland (ADM),"Food, Beverages & Tobacco",Food Production,64355.0,-0.5,1772.0,28.5,49719.0,38332,Chicago,Illinois,no,yes,no,yes,https://fortune.com/company/archer-daniels-midland/global500/
+294,2021,146,Archer Daniels Midland,"Food, Beverages & Tobacco",Food Production,64355.0,-0.5,1772.0,28.5,49719.0,38332,Chicago,Illinois,no,yes,no,yes,https://fortune.com/company/archer-daniels-midland/global500/
 295,2021,164,Valero Energy,Energy,Petroleum Refining,60115.0,-41.5,-1421.0,-158.7,51774.0,9964,San Antonio,Texas,no,no,no,no,https://fortune.com/company/valero-energy/global500/
 296,2021,173,Boeing,Aerospace & Defense,Aerospace & Defense,58158.0,-24.0,-11873.0,0.0,152136.0,141000,Chicago,Illinois,no,no,no,no,https://fortune.com/company/boeing/global500/
 297,2021,178,Prudential Financial,Financials,"Insurance: Life, Health (stock)",57033.0,-12.0,-374.0,-108.9,940722.0,41671,Newark,New Jersey,no,no,no,no,https://fortune.com/company/prudential-financial/global500/
 298,2021,182,HP,Technology,"Computers, Office Equipment",56639.0,-3.6,2844.0,-9.8,34681.0,53000,Palo Alto,California,no,yes,no,no,https://fortune.com/company/hp/global500/
-299,2021,183,Raytheon Technologies,Aerospace & Defense,Aerospace & Defense,56587.0,-26.6,-3519.0,-163.6,162153.0,181000,Waltham,Massachusetts,no,no,no,no,https://fortune.com/company/raytheon-technologies/global500/
+299,2021,183,Raytheon,Aerospace & Defense,Aerospace & Defense,56587.0,-26.6,-3519.0,-163.6,162153.0,181000,Waltham,Massachusetts,no,no,no,no,https://fortune.com/company/raytheon-technologies/global500/
 300,2021,190,StoneX,Financials,Diversified Financials,54139.6,64.6,169.6,99.3,13474.9,2950,New York,New York,no,yes,no,yes,https://fortune.com/company/stonex-group/global500/
 301,2021,193,Goldman Sachs Group,Financials,Banks: Commercial and Savings,53498.0,-0.8,9459.0,11.7,1163028.0,40500,New York,New York,no,yes,no,yes,https://fortune.com/company/goldman-sachs-group/global500/
 302,2021,199,Sysco,Wholesalers,Wholesalers: Food and Grocery,52893.3,-12.0,215.5,-87.1,22628.3,57000,Houston,Texas,no,yes,no,no,https://fortune.com/company/sysco/global500/
@@ -348,7 +348,7 @@ idx,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,
 346,2021,428,CHS,"Food, Beverages & Tobacco",Food Production,28406.4,-11.0,422.4,-49.1,15993.9,10493,Inver Grove Heights,Minnesota,no,yes,no,no,https://fortune.com/company/chs/global500/
 347,2021,445,Jabil,Technology,Semiconductors and Other Electronic Components,27266.4,7.8,53.9,-81.2,14397.4,240000,St. Petersburg,Florida,yes,yes,no,yes,https://fortune.com/company/jabil-circuit/global500/
 348,2021,447,Enterprise Products Partners,Energy,Pipelines,27199.7,-17.0,3775.6,-17.8,64106.7,7130,Houston,Texas,no,yes,no,no,https://fortune.com/company/enterprise-products-partners/global500/
-349,2021,452,Hewlett Packard Enterprise,Technology,"Computers, Office Equipment",26982.0,-7.4,-322.0,-130.7,54015.0,59400,Houston,Texas,no,no,no,no,https://fortune.com/company/hewlett-packard-enterprise/global500/
+349,2021,452,HP,Technology,"Computers, Office Equipment",26982.0,-7.4,-322.0,-130.7,54015.0,59400,Houston,Texas,no,no,no,no,https://fortune.com/company/hewlett-packard-enterprise/global500/
 350,2021,456,United Natural Foods,Wholesalers,Wholesalers: Food and Grocery,26742.8,13.9,-274.1,0.0,7587.0,28300,Providence,Rhode Island,yes,no,no,yes,https://fortune.com/company/united-natural-foods/global500/
 351,2021,462,Mondelez International,"Food, Beverages & Tobacco",Food Consumer Products,26581.0,2.8,3555.0,-8.1,67810.0,79000,Chicago,Illinois,no,yes,no,no,https://fortune.com/company/mondelez-international/global500/
 352,2021,464,ViacomCBS,Media,Entertainment,26186.0,-5.8,2422.0,-26.8,52663.0,24225,New York,New York,no,yes,no,no,https://fortune.com/company/cbs/global500/
