@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bar chart that sorts the y-values by the x-values.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
+      "format": {"parse": {"profits": "number"}} },
+      "width":500,
+  "params": [
+        {
+          "name": "year_selection",
+          "bind": {
+            "input": "select",
+            "options": ["2019", "2020", "2021"],
+            "labels": ["2019", "2020", "2021"],
+            "name": "Select Year: "
+          },
+          "value":"2019"
+        }
+      ],
+  "transform": [{
+        "window": [{
+          "op": "rank",
+          "as": "ranks"
+        }],
+        "sort": [{ "field": "profits", "order": "descending" }],
+        "ignorePeers": true,
+        "groupby":["year"]
+      }, 
+      {
+        "filter": "datum.ranks <= 10"
+      },
+      {"filter": "datum.year == year_selection"}],
+  "layer":[
+    {"mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "name",
+      "type": "ordinal",
+      "scale":{"domain":["Apple", "JPMorgan Chase", "Alphabet", "Bank of America", "Wells Fargo", "Facebook", "Intel", "Exxon Mobil", "AT&T", "Citigroup", "Berkshire Hathaway", "Microsoft", "Verizon Communications"]}
+    },
+    "x": {
+      "aggregate": "sum",
+      "field": "profits",
+      "title": "Profit",
+      "axis":{"labels": false, "domain": false, "tickColor":null}
+    },
+    "tooltip":[
+      {"field":"profits"},
+      {"field":"ranks"},
+      {"field":"year"}
+    ]}}, 
+    {"mark":{"type": "text", "color":"black"}, 
+    "encoding": {
+      "x": {"field": "profits", "type": "quantitative"},
+        "text": {"field": "profits"},
+      "y": {"type": "nominal", "field": "name"}}}]
+    }

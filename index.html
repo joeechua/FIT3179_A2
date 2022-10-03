@@ -30,8 +30,43 @@
         <div id="vis"></div>
       </div>
       <div class="column2">
-        <p style=font-size:20px;>From the map we can observe that California is the top earning state amongst the 50 other states, charting a total of 55 Billion dollars in 3 years</p>
+        <p style=font-size:20px;text-align:center;>From the map we can observe that California is the top earning state amongst the 50 other states, charting a total of 55 Billion dollars in 3 years</p>
       </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div id="vis2"></div>
+      </div>
+      <div class="column2">
+        <p style=font-size:20px;text-align:center;>Something that combines the both of these</p>
+      </div>
+      <div class="column"> <div id="vis3"></div></div>
+    </div>
+    <div class="row">
+      <div id="vis5"></div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div id="vis4"></div>
+      </div>
+      <div class="column2">
+        <p style=font-size:20px;text-align:center;>Someting about gauge and dist</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <p>SOMETHING SOMETHING TWO HALF CIRCLES</p>
+      </div>
+      <div class="outercolumn">
+        <div id="vis6" class="below"></div>
+        <div id="vis7" class="top"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="vis8"></div>
+    </div>
+    <div class="row">
+      <p>CONCLUSION SAYA SANGAT LETIH</p>
     </div>
   </div>
   
@@ -45,6 +80,43 @@ var spec = "https://joeechua.github.io/FIT3179_A2/ChloroplethMap.json";
       vegaEmbed('#vis', spec).then(function(result) {
       }).catch(console.error);
 
+var spec = "https://joeechua.github.io/FIT3179_A2/CEOIsotype.json";
+
+      vegaEmbed('#vis2', spec).then(function(result) {
+      }).catch(console.error);
+
+var spec = "https://joeechua.github.io/FIT3179_A2/Top10US.json";
+
+vegaEmbed('#vis3', spec).then(function(result) {
+}).catch(console.error);
+
+var spec = "https://joeechua.github.io/FIT3179_A2/gaugechart.json";
+
+vegaEmbed('#vis4', spec).then(function(result) {
+}).catch(console.error);
+
+var spec = "https://joeechua.github.io/FIT3179_A2/DistributionBars.json";
+
+vegaEmbed('#vis5', spec).then(function(result) {
+}).catch(console.error);
+
+var spec = "https://joeechua.github.io/FIT3179_A2/EmployeeSector.json";
+
+vegaEmbed('#vis6', spec).then(function(result) {
+}).catch(console.error);
+
+var spec = "https://joeechua.github.io/FIT3179_A2/EmployeeState.json";
+
+vegaEmbed('#vis7', spec).then(function(result) {
+}).catch(console.error);
+
+var spec = "https://joeechua.github.io/FIT3179_A2/SectorRev.json";
+
+vegaEmbed('#vis8', spec).then(function(result) {
+}).catch(console.error);
+
 
 </script>
+
+
 </html>

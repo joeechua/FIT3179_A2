@@ -39,6 +39,28 @@
   width: 50%;
 }
 
+.outercolumn {
+  float: left;
+  width: 60%;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+}
+
+.outercolumn > * {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+.outercolumn .below {
+  z-index: 2;
+}
+.outercolumn .top {
+  z-index: 1;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -110,6 +132,7 @@
     font-weight: 900;
     font-size:x-large;
     padding: 0px;
+    text-align: center;
     margin-top: 0%;
     
   }
