@@ -38,7 +38,12 @@
     <div class="row" style="padding-left: 30px;">
       <div id="vis8" style="width: 100%;"></div>
     </div>
-      
+    <div class="row" style="text-align: right;">
+      <div style="padding-left: 50;" id="vis9"></div>
+      <div style="padding-right: 50;">
+        <h1>Together, the Top 10 companies have earned $95 billion, which is roughly 43% of the total profit for all American Fortune 500 companies over 3 years</h1>
+      </div>
+    </div>
       
     </div>
   </div>
@@ -86,6 +91,11 @@ vegaEmbed('#vis7', spec).then(function(result) {
 var spec = "https://joeechua.github.io/FIT3179_A2/Top10BarChart.json";
 
 vegaEmbed('#vis8', spec).then(function(result) {
+}).catch(console.error);
+
+var spec = "https://joeechua.github.io/FIT3179_A2/Top10ProfitsPie.json";
+
+vegaEmbed('#vis9', spec).then(function(result) {
 }).catch(console.error);
 
 

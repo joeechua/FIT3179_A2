@@ -1,102 +1,221 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A bar chart that sorts the y-values by the x-values.",
-  "title":"Top Companies by Profits",
-  "background":null,
+  "title": "Top Companies by Profits",
+  "background": null,
   "data": {
     "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
-      "format": {"parse": {"profits": "number"}} },
-      "width":"container",
-      "height":400,
+    "format": {"parse": {"profits": "number"}}
+  },
+  "width": "container",
+  "height": 400,
   "params": [
-        {
-          "name": "year_selection",
-          "bind": {
-            "input": "select",
-            "options": ["2019", "2020", "2021"],
-            "labels": ["2019", "2020", "2021"],
-            "name": "Select Year: "
-          },
-          "value":"2019"
-        }
-      ],
-  "transform": [{
-        "window": [{
-          "op": "rank",
-          "as": "ranks"
-        }],
-        "sort": [{ "field": "profits", "order": "descending" }],
-        "ignorePeers": true,
-        "groupby":["year"]
-      }, 
-      {
-        "filter": "datum.ranks <= 10"
+    {
+      "name": "year_selection",
+      "bind": {
+        "input": "select",
+        "options": ["2019", "2020", "2021"],
+        "labels": ["2019", "2020", "2021"],
+        "name": "Select Year: "
       },
-      {"filter": "datum.year == year_selection"}],
-  "layer":[
-    {"mark": "bar",
-  "encoding": {
-    "stroke":{"value":"black"},
-    "strokeWidth":{"value":1},
-    "color":{"field":"name",
-    "legend":null,
-    "type":"nominal", "scale":{
-          "domain":["AT&T", "Alphabet", "Apple", "Bank of America", "Citigroup", "Exxon Mobil", "Facebook", "Intel", "JPMorgan Chase", "Wells Fargo", "Berkshire Hathaway", "Microsoft", "Verizon Communications", "Amazon"],
-          "range":["#00A8E0", "#F01716", "#A2AAAD", "#0065B3", "#003A72", "#F01523", "#4267B2", "#0071c5", "#211E1E", "#CD1409", "#2D2D94", "#F34F1C", "black", "#FF9900"]}},
-    "y": {
-      "field": "name",
-      "type": "ordinal",
-      "scale":{},
-      "axis":{"labels": false, "domain": false}
-    },
-    "x": {
-      "aggregate": "sum",
-      "field": "profits",
-      "scale":{},
-      "title":null,
-      "axis":{"labels": false, "domain": false, "ticks": false}
-    },
-    "tooltip":[
-      {"field":"profits"},
-      {"field":"ranks"},
-      {"field":"year"}
-    ]}}, 
-    {"mark":{"type": "text", "color":"black", "align":"left", "dx":4, "fontSize":16}, 
-    "encoding": {
-      "x": {"field": "profits", "type": "quantitative"},
-        "text": {"field":"profits", "format":"$"},
-      "y": {"type": "nominal", "field": "name"}
-        }
-      },
-      {"mark":{"type": "text", "color":"white", "align":"right", "dx":-8, "fontSize":10.5}, 
-    "encoding": {
-      "x": {"field": "profits", "type": "quantitative"},
-        "text": {"field":"name"},
-      "y": {"type": "nominal", "field": "name"}}},
-      {"data":{"values": [
-      {"x": "2020", "x2": "2021", "x3": "2021", "y": "AT&T", "img": "https://joeechua.github.io/FIT3179_A2/images/atnt.png", "x-values":["2019", "2020", "2021"]},
-      {"x": "", "y": "Alphabet", "img": "https://joeechua.github.io/FIT3179_A2/images/alphabet.png"},
-      {"x": "", "y": "Apple", "img": "https://joeechua.github.io/FIT3179_A2/images/apple.png"},
-      {"x": "", "y": "Bank of America", "img": "https://joeechua.github.io/FIT3179_A2/images/bank_of_america.png"},
-      {"x": "2021", "y": "Citigroup", "img": "https://joeechua.github.io/FIT3179_A2/images/citi.png"},
-      {"x": "2020", "x2":"2021", "y": "Exxon Mobil", "img": "data/ffox.png"},
-      {"x": "2020", "y": "Facebook", "img": "https://joeechua.github.io/FIT3179_A2/images/facebook.png"},
-      {"x": "", "y": "Intel", "img": "https://joeechua.github.io/FIT3179_A2/images/intel.png"},
-      {"x": "", "y": "JPMorgan Chase", "img": "https://joeechua.github.io/FIT3179_A2/images/JP-Morgan-Chase-Logo.png"},
-      {"x": "2021", "y": "Wells Fargo", "img": "https://joeechua.github.io/FIT3179_A2/images/Wells_Fargo-Logo.wine.png"},
-      {"x": "2019", "y": "Berkshire Hathaway", "img": "https://joeechua.github.io/FIT3179_A2/images/berkshire-hathaway.png"},
-      {"x": "2019", "y": "Microsoft", "img": "https://joeechua.github.io/FIT3179_A2/images/intel.png"},
-      {"x": "2019", "y": "Verizon Communications", "img": "https://joeechua.github.io/FIT3179_A2/images/verizon.png"},
-      {"x": "2019", "x2":"2020", "y": "Amazon", "img": "https://joeechua.github.io/FIT3179_A2/images/amazon.png"}]},
-"transform": [{"calculate": "0", "as": "xAxis"}, {"filter":"year_selection != datum.x && year_selection != datum.x2"}],
-      "mark": {"type": "image", "width": 60, "height": 30, "align":"right"},
-      "encoding": {
-        "x": {
-          "field": "xAxis",
-          "type": "quantitative"
-        },
-        "y":{"field":"y", "type": "nominal","title":null, "axis":{"domain": false}},
-        "url": {"field": "img", "type": "nominal"}
-      }}
-      ]
+      "value": "2019"
     }
+  ],
+  "transform": [
+    {
+      "window": [{"op": "rank", "as": "ranks"}],
+      "sort": [{"field": "profits", "order": "descending"}],
+      "ignorePeers": true,
+      "groupby": ["year"]
+    },
+    {"filter": "datum.ranks <= 10"},
+    {"filter": "datum.year == year_selection"},
+    {"calculate": "datum.profits", "as": "prof_mil"}
+  ],
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "stroke": {"value": "black"},
+        "strokeWidth": {"value": 1},
+        "color": {
+          "field": "name",
+          "legend": null,
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "AT&T",
+              "Alphabet",
+              "Apple",
+              "Bank of America",
+              "Citigroup",
+              "Exxon Mobil",
+              "Facebook",
+              "Intel",
+              "JPMorgan Chase",
+              "Wells Fargo",
+              "Berkshire Hathaway",
+              "Microsoft",
+              "Verizon Communications",
+              "Amazon"
+            ],
+            "range": [
+              "#00A8E0",
+              "#F01716",
+              "#A2AAAD",
+              "#0065B3",
+              "#003A72",
+              "#F01523",
+              "#4267B2",
+              "#0071c5",
+              "#211E1E",
+              "#CD1409",
+              "#2D2D94",
+              "#F34F1C",
+              "black",
+              "#FF9900"
+            ]
+          }
+        },
+        "y": {
+          "field": "name",
+          "type": "ordinal",
+          "scale": {},
+          "axis": {"labels": false, "domain": false}
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "profits",
+          "scale": {},
+          "title": null,
+          "axis": {"labels": false, "domain": false, "ticks": false}
+        },
+        "tooltip": [{"field": "profits"}, {"field": "ranks"}, {"field": "year"}]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "black",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 16
+      },
+      "encoding": {
+        "x": {"field": "profits", "type": "quantitative"},
+        "text": {"field": "prof_mil", "format": "$.2s"},
+        "y": {"type": "nominal", "field": "name"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "white",
+        "align": "right",
+        "dx": -8,
+        "fontSize": 10.5
+      },
+      "encoding": {
+        "x": {"field": "profits", "type": "quantitative"},
+        "text": {"field": "name"},
+        "y": {"type": "nominal", "field": "name"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": "2020",
+            "x2": "2021",
+            "x3": "2021",
+            "y": "AT&T",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/atnt.png",
+            "x-values": ["2019", "2020", "2021"]
+          },
+          {
+            "x": "",
+            "y": "Alphabet",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/alphabet.png"
+          },
+          {
+            "x": "",
+            "y": "Apple",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/apple.png"
+          },
+          {
+            "x": "",
+            "y": "Bank of America",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/bank_of_america.png"
+          },
+          {
+            "x": "2021",
+            "y": "Citigroup",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/citi.png"
+          },
+          {
+            "x": "2020",
+            "x2": "2021",
+            "y": "Exxon Mobil",
+            "img": "data/ffox.png"
+          },
+          {
+            "x": "2020",
+            "y": "Facebook",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/facebook.png"
+          },
+          {
+            "x": "",
+            "y": "Intel",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/intel.png"
+          },
+          {
+            "x": "",
+            "y": "JPMorgan Chase",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/JP-Morgan-Chase-Logo.png"
+          },
+          {
+            "x": "2021",
+            "y": "Wells Fargo",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/Wells_Fargo-Logo.wine.png"
+          },
+          {
+            "x": "2019",
+            "y": "Berkshire Hathaway",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/berkshire-hathaway.png"
+          },
+          {
+            "x": "2019",
+            "y": "Microsoft",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/intel.png"
+          },
+          {
+            "x": "2019",
+            "y": "Verizon Communications",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/verizon.png"
+          },
+          {
+            "x": "2019",
+            "x2": "2020",
+            "y": "Amazon",
+            "img": "https://joeechua.github.io/FIT3179_A2/images/amazon.png"
+          }
+        ]
+      },
+      "transform": [
+        {"calculate": "-1000", "as": "xAxis"},
+        {"filter": "year_selection != datum.x && year_selection != datum.x2"}
+      ],
+      "mark": {"type": "image", "width": 60, "height": 30, "align": "right"},
+      "encoding": {
+        "x": {"field": "xAxis", "type": "quantitative"},
+        "y": {
+          "field": "y",
+          "type": "nominal",
+          "title": null,
+          "axis": {"domain": false}
+        },
+        "url": {"field": "img", "type": "nominal"}
+      }
+    }
+  ]
+}
