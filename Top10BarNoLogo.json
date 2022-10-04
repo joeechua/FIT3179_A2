@@ -1,0 +1,128 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv","format": {"parse": {"profits": "number"}}
+    },
+    "width": "container",
+    "height": 400,
+    "params": [
+      {
+        "name": "year_selection",
+        "bind": {
+          "input": "select",
+          "options": ["2019", "2020", "2021"],
+          "labels": ["2019", "2020", "2021"],
+          "name": "Select Year: "
+        },
+        "value": "2019"
+      }
+    ],
+    "transform": [
+      {
+        "window": [{"op": "rank", "as": "ranks"}],
+        "sort": [{"field": "profits", "order": "descending"}],
+        "ignorePeers": true,
+        "groupby": ["year"]
+      },
+      {"filter": "datum.ranks <= 10"},
+      {"filter": "datum.year == year_selection"},
+      {"calculate": "datum.profits", "as": "prof_mil"}
+    ],
+    "encoding": {
+      "y": {
+        "field": "name",
+        "type": "ordinal",
+        "axis":{"domain": false, "labels":false, "title":null, "ticks":false, "grid": false},
+        "sort": {
+          "encoding": "x",
+          "order": "descending"
+        }
+      },
+      "x": {
+        "field": "profits",
+        "type": "quantitative",
+        "axis":{"domain": false, "labels":false, "title":null, "ticks":false, "grid": false},
+        "stack": null
+      }
+    },
+    "layer": [
+      {
+        "mark": {"type":"bar"},
+        "encoding": {
+          "opacity":{"value":0.88},
+          "stroke":{"value":"black"},
+          "color":{
+            "field":"name",
+            "type":"nominal",
+        "legend":null,
+        "scale": {
+              "domain": [
+                "AT&T",
+                "Alphabet",
+                "Apple",
+                "Bank of America",
+                "Citigroup",
+                "Exxon Mobil",
+                "Facebook",
+                "Intel",
+                "JPMorgan Chase",
+                "Wells Fargo",
+                "Berkshire Hathaway",
+                "Microsoft",
+                "Verizon Communications",
+                "Amazon"
+              ],
+              "range": [
+                "#00A8E0",
+                "#F01716",
+                "#A2AAAD",
+                "#0065B3",
+                "#003A72",
+                "#F01523",
+                "#4267B2",
+                "#0071c5",
+                "#211E1E",
+                "#CD1409",
+                "#2D2D94",
+                "#F34F1C",
+                "black",
+                "#FF9900"
+              ]
+            }
+            
+          }
+        }
+        
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "dx": 5
+        },
+        "encoding": {
+          "color":{"value":"black"},
+          "text": {
+            "field": "prof_mil", "format": "$.2s",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "color": "white",
+          "align": "right",
+          "dx": -8,
+          "fontSize": 10.5
+        },
+        "encoding": {
+          "text": {
+            "field": "name",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  }

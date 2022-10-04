@@ -24,7 +24,7 @@
     </div>
     <div class="row">
       <div class="column" style="width:40%;">
-        <p style="font-size:20px;">American companies dominate at the world stage</p>
+        <p style="font-size:20px;">American companies dominate at the global stage</p>
         <p style="font-size:16px;">These American companies consistently log revenues of over $100Million.</p> 
         <p style="font-size:16px;">Over 3 years, there is little fluctuation in the rankings, indicating a strong customer base and useful products throughout
       </p>
@@ -38,11 +38,19 @@
     <div class="row" style="padding-left: 30px;">
       <div id="vis8" style="width: 100%;"></div>
     </div>
-    <div class="row" style="text-align: right;">
-      <div style="padding-left: 50;" id="vis9"></div>
-      <div style="padding-right: 50;">
-        <h1>Together, the Top 10 companies have earned $95 billion, which is roughly 43% of the total profit for all American Fortune 500 companies over 3 years</h1>
+    <div class="row" style="text-align: left; padding-top: 20px;">
+      <div style="padding-left: 400px;" id="vis9"></div>
+      <div style="padding-right: 300px;">
+        <br><br>
+        <span>Together, the Top 10 companies have earned $95 billion, which is roughly</span>
+        <span style="color:#002868; font-weight: bold;">43% of the total profit for all American Fortune 500 companies over 3 years</span>
       </div>
+    </div>
+    <div class="row" style="display: flex; justify-content: center; padding-top: 30px; font-size: 25px; padding-bottom: 30px;">
+      <p>ALL <b>334 COMPANIES</b>, SORTED</p>
+    </div>
+    <div class="row">
+      <div id="vis6", style="font: Poppins;"></div>
     </div>
       
     </div>
@@ -88,7 +96,7 @@ var spec = "https://joeechua.github.io/FIT3179_A2/EmployeeState.json";
 vegaEmbed('#vis7', spec).then(function(result) {
 }).catch(console.error);
 
-var spec = "https://joeechua.github.io/FIT3179_A2/Top10BarChart.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/Top10BarChartNoLogo.json";
 
 vegaEmbed('#vis8', spec).then(function(result) {
 }).catch(console.error);
