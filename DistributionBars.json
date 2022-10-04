@@ -32,7 +32,7 @@
       "y": {"aggregate": "count", "axis":{"grid": false}},
       "color": {"value": "#960018"}
     },
-    "height":400,
-    "width":"container"
+    "height":250,
+    "width":500
   }
 }
