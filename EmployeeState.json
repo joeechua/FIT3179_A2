@@ -3,69 +3,75 @@
   "description": "A simple radial chart with embedded data.",
   "data": {
     "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
-    "format": {"parse": {"employees": "number"}} 
+    "format": {"parse": {"employees": "number"}}
   },
   "background": null,
-  "width":450,
-  "height":450,
+  "width": 800,
+  "height": 450,
   "params": [
-      {
-        "name": "year_selection",
-        "bind": {
-          "input": "select",
-          "options": ["2019", "2020", "2021"],
-          "labels": ["2019", "2020", "2021"],
-          "name": "Select Year: "
-        },
-        "value":"2019"
-      }
-    ],
-  "transform": [{"filter":"year_selection == null || year_selection == datum.year"},{
-      "window": [{
-        "op": "rank",
-        "as": "rank"
-      }],
-      "sort": [{ "field": "employees", "order": "descending" }]
-    }, {
-      "filter": "datum.rank <= 10"
-    }],
-  "layer": [{
-    "mark": {"type": "arc", "innerRadius":80, "stroke": "black"}
-  },{
-    "mark": {"type": "text", "radiusOffset": 20}
-  }],
-  "encoding": {
-    "order":{"field":"employees", "type": "quantitative", "sort": "descending"},
-    "theta": {"field": "employees", "type": "quantitative", "stack": true, "scale":{"type":"linear","rangeMax":4.7, "rangeMin":1.5708}},
-    "radius": {"field": "employees", "scale": {"type": "sqrt", "zero": true, "rangeMin": 70}},
-    "angle": {},
-    "color": {"field": "hqstate", "type": "nominal", "legend": {
-          "title": "State",
-          "titleFontSize": 13,
-          "labelFontSize": 12,
-          "titleLimit": 1000,
-          "titlePadding": 10,
-          "labelOffset": 13,
-          "orient":"none",
-          "legendX":550,
-          "legendY":225
-        }},
-    "tooltip": [
-      {
-        "field": "name",
-        "type":"ordinal",
-        "title": "Company"
+    {
+      "name": "year_selection",
+      "bind": {
+        "input": "select",
+        "options": ["2019", "2020", "2021"],
+        "labels": ["2019", "2020", "2021"],
+        "name": "Select Year: "
       },
+      "value": "2019"
+    }
+  ],
+  "encoding": {
+    "order": {
+      "field": "employees",
+      "type": "quantitative",
+      "sort": "descending"
+    },
+    "theta": {
+      "field": "employees",
+      "type": "quantitative",
+      "stack": true,
+      "scale": {"type": "linear", "rangeMax": 4.7, "rangeMin": 1.5708}
+    },
+    "radius": {
+      "field": "employees",
+      "scale": {"type": "sqrt", "zero": true, "rangeMin": 70}
+    },
+    "angle": {},
+    "color": {
+      "field": "hqstate",
+      "type": "nominal",
+      "legend": {
+        "title": "State",
+        "titleFontSize": 13,
+        "labelFontSize": 12,
+        "titleLimit": 1000,
+        "titlePadding": 10,
+        "labelOffset": 13,
+        "orient": "none",
+        "legendX": 720,
+        "legendY": 225
+      }
+    }
+  },
+  "transform": [
+    {"filter": "year_selection == null || year_selection == datum.year"},
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "employees", "order": "descending"}]
+    },
+    {"filter": "datum.rank <= 10"}
+  ],
+  "layer": [
+    {"mark": {"type": "arc", "innerRadius": 300, "stroke": "black"},
+    "encoding": {"tooltip": [
+      {"field": "name", "type": "ordinal", "title": "Company"},
       {
         "field": "employees",
-        "type":"quantitative",
+        "type": "quantitative",
         "title": "Number of Employees"
       },
-      {
-        "field": "year",
-        "type":"nominal",
-        "title": "Year Listed"
-      }
-    ]
-  }
+      {"field": "year", "type": "nominal", "title": "Year Listed"},
+      {"field": "sector", "type": "nominal", "title": "Sector"}
+    ]}}
+  ]
 }
