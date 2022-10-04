@@ -40,25 +40,20 @@
   width: 50%;
 }
 
-.outercolumn {
-  float: left;
-  width: 60%;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+.outer {
   display: grid;
   grid-template: 1fr / 1fr;
   place-items: center;
+  padding-top: 0px;
 }
-
-.outercolumn > * {
+.outer > * {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
 }
-.outercolumn .below {
+.outer .below {
   z-index: 2;
 }
-.outercolumn .top {
+.outer .top {
   z-index: 1;
 }
 

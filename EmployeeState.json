@@ -7,7 +7,7 @@
   },
   "background": null,
   "width": 800,
-  "height": 450,
+  "height": 50,
   "params": [
     {
       "name": "year_selection",
@@ -62,16 +62,20 @@
     {"filter": "datum.rank <= 10"}
   ],
   "layer": [
-    {"mark": {"type": "arc", "innerRadius": 300, "stroke": "black"},
-    "encoding": {"tooltip": [
-      {"field": "name", "type": "ordinal", "title": "Company"},
-      {
-        "field": "employees",
-        "type": "quantitative",
-        "title": "Number of Employees"
-      },
-      {"field": "year", "type": "nominal", "title": "Year Listed"},
-      {"field": "sector", "type": "nominal", "title": "Sector"}
-    ]}}
+    {
+      "mark": {"type": "arc", "innerRadius": 260, "stroke": "black"},
+      "encoding": {
+        "tooltip": [
+          {"field": "name", "type": "ordinal", "title": "Company"},
+          {
+            "field": "employees",
+            "type": "quantitative",
+            "title": "Number of Employees"
+          },
+          {"field": "year", "type": "nominal", "title": "Year Listed"},
+          {"field": "sector", "type": "nominal", "title": "Sector"}
+        ]
+      }
+    }
   ]
 }
