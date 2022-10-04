@@ -5,9 +5,9 @@
     "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
     "format": {"parse": {"employees": "number"}}
   },
-  "background": null,
   "width": 800,
   "height": 50,
+  "background":null,
   "params": [
     {
       "name": "year_selection",
