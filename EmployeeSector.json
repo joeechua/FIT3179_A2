@@ -6,7 +6,7 @@
     "format": {"parse": {"profits": "number"}}
   },
   "width": 800,
-  "height": 450,
+  "height": 50,
   "background": null,
   "params": [
     {
@@ -45,7 +45,10 @@
         "labelFontSize": 12,
         "titleLimit": 1000,
         "titlePadding": 10,
-        "labelOffset": 13
+        "labelOffset": 13,
+        "orient": "none",
+        "legendX":720,
+        "legendY":-250
       },
       "scale": {
         "domain": [
@@ -61,7 +64,7 @@
   },
   "layer": [
     {
-      "mark": {"type": "arc", "innerRadius": 150},
+      "mark": {"type": "arc", "innerRadius": 260, "outerRadius":190},
       "encoding": {
         "opacity": {"value": 0.78},
         "stroke": {"value": "black"},
@@ -81,9 +84,9 @@
         "type": "image",
         "url": "https://joeechua.github.io/FIT3179_A2/images/apple.png",
         "width": 40,
-        "height":40,
-        "x": 150,
-        "y": 140
+        "height": 40,
+        "x": 120,
+        "y": -80
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
@@ -95,8 +98,8 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/JP-Morgan-Chase-Logo.png",
         "width": 90,
         "height": 85,
-        "x": 205,
-        "y": 35
+        "x": 175,
+        "y": -190
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
@@ -109,7 +112,7 @@
         "width": 95,
         "height": 95,
         "x": 295,
-        "y": -9
+        "y": -240
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
@@ -122,7 +125,7 @@
         "width": 50,
         "height": 50,
         "x": 400,
-        "y": -25
+        "y": -255
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
@@ -134,8 +137,8 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/Wells_Fargo-Logo.wine.png",
         "width": 70,
         "height": 70,
-        "x": 470,
-        "y": -20
+        "x": 480,
+        "y": -248
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
@@ -147,8 +150,8 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/facebook.png",
         "width": 35,
         "height": 35,
-        "x": 535,
-        "y": 8
+        "x": 555,
+        "y": -218
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
@@ -160,8 +163,8 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/intel.png",
         "width": 65,
         "height": 65,
-        "x": 590,
-        "y": 50
+        "x": 620,
+        "y": -170
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
@@ -173,8 +176,8 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/atnt.png",
         "width": 75,
         "height": 75,
-        "x": 640,
-        "y": 145
+        "x": 676,
+        "y": -60
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
@@ -186,8 +189,8 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/citi.png",
         "width": 45,
         "height": 45,
-        "x": 655,
-        "y": 200
+        "x": 690,
+        "y": 0
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
