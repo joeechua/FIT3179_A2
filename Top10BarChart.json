@@ -6,7 +6,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
       "format": {"parse": {"profits": "number"}} },
-      "width":700,
+      "width":"container",
       "height":400,
   "params": [
         {
