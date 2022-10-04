@@ -1,68 +1,129 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A simple donut chart with embedded data.",
-    "data": {
-      "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
-      "format": {"parse": {"employees": "number"}} 
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
+    "format": {"parse": {"profits": "number"}}
+  },
+  "width": 500,
+  "height": 350,
+  "background": null,
+  "params": [
+    {
+      "name": "year_selection",
+      "bind": {
+        "input": "select",
+        "options": ["2019", "2020", "2021"],
+        "labels": ["2019", "2020", "2021"],
+        "name": "Select Year: "
+      },
+      "value":"2019"
+    }
+  ],
+  "transform": [
+    {"filter": "year_selection == null || year_selection == datum.year"},
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "profits", "order": "descending"}]
     },
-    "width": 500,
-    "height": 150,
-    "background": null,
-    "params": [
-        {
-          "name": "year_selection",
-          "bind": {
-            "input": "select",
-            "options": [null, "2019", "2020", "2021"],
-            "labels": ["Overall", "2019", "2020", "2021"],
-            "name": "Select Year: "
-          }
-        }
-      ],
-    "transform": [{"filter":"year_selection == null || year_selection == datum.year"},{
-        "window": [{
-          "op": "rank",
-          "as": "rank"
-        }],
-        "sort": [{ "field": "employees", "order": "descending" }]
-      }, {
-        "filter": "datum.rank <= 10"
-      }],
-    "encoding": {
-      "order":{"field":"employees", "type": "quantitative", "sort": "descending"},
-      "theta": {"field": "profits", "type": "quantitative", "stack":true, "scale":{"type":"linear","rangeMax":1.5708, "rangeMin":-1.5708}},
-      "color": {"field": "sector", "type": "nominal", "legend": {
-            "title": "Sector",
-            "titleFontSize": 13,
-            "labelFontSize": 12,
-            "titleLimit": 1000,
-            "titlePadding": 10,
-            "labelOffset": 13
-          }},
-      "tooltip": [
-        {
-          "field": "name",
-          "type":"ordinal",
-          "title": "Company"
-        },
-        {
-          "field": "employees",
-          "type":"quantitative",
-          "title": "Number of Employees"
-        },
-        {
-          "field": "year",
-          "type":"nominal",
-          "title": "Year Listed"
-        }
-      ]
+    {"filter": "datum.rank <= 10"}
+  ],
+  "encoding": {
+    "order": {
+      "field": "profits",
+      "type": "quantitative",
+      "sort": "descending"
     },
-    "layer":[{
-      "mark":{"type":"arc", "innerRadius":130}},
-      {"mark": {"type": "text", "radius": 170},
-      "encoding": {
-        "text": {"field": "sector", "type": "nominal"}
+    "theta": {
+      "field": "profits",
+      "type": "quantitative",
+      "stack":true,
+      "scale": {"type": "linear", "rangeMax": 1.5708, "rangeMin": -1.5708}
+    },
+    "color": {
+      "field": "sector",
+      "type": "nominal",
+      "legend": {
+        "title": "Sector",
+        "titleFontSize": 13,
+        "labelFontSize": 12,
+        "titleLimit": 1000,
+        "titlePadding": 10,
+        "labelOffset": 13
+      },
+      "scale":{
+        "domain":["Energy", "Technology", "Telecommunications", "Financials", "Retailing"],
+        "range":["#F01523", "#A2AAAD", "#00A8E0", "#211E1E", "#FF9900"]
       }
-    }]
-    
-  }
+    }
+  },
+  "layer": [
+    {"mark": {"type": "arc", "innerRadius": 130},
+    "encoding": {
+      "opacity": {"value":0.78},
+      "stroke": {"value":"black"},
+      "tooltip": [
+      {"field": "name", "type": "ordinal", "title": "Company"},
+      {
+        "field": "employees",
+        "type": "quantitative",
+        "title": "Number of Employees"
+      },
+      {"field": "year", "type": "nominal", "title": "Year Listed"}
+    ]}},
+    {
+      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/apple.png", "width":30, "height":30, "x":60, "y":120},
+      "encoding": {
+        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/JP-Morgan-Chase-Logo.png", "width":90, "height":35, "x":95, "y":35},
+      "encoding": {
+        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/alphabet.png", "width":65, "height":55, "x":175, "y":-2},
+      "encoding": {
+        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/bank_of_america.png", "width":35, "height":35, "x":250, "y":-15},
+      "encoding": {
+        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/Wells_Fargo-Logo.wine.png", "width":45, "height":45, "x":300, "y":-10},
+      "encoding": {
+        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/facebook.png", "width":20, "height":20, "x":345, "y":10},
+      "encoding": {
+        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/intel.png", "width":45, "height":45, "x":395, "y":40},
+      "encoding": {
+        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/atnt.png", "width":45, "height":45, "x":435, "y":115},
+      "encoding": {
+        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/citi.png", "width":25, "height":25, "x":445, "y":155},
+      "encoding": {
+        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+      }
+    }
+  ]
+}

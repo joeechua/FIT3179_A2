@@ -11,6 +11,7 @@
     },
     "layer":[{"mark": {"type":"arc", "radius2":1},
     "encoding": {
+        "opacity":{"value":0.88},
       "theta": {"field": "value", "type": "quantitative"},
       "color":{
         "field":"category",
