@@ -43,7 +43,7 @@
 .outer {
   display: grid;
   grid-template: 1fr / 1fr;
-  place-items: center;
+  place-items: top;
   padding-top: 0px;
 }
 .outer > * {
@@ -62,6 +62,20 @@
   content: "";
   display: table;
   clear: both;
+}
+
+path {
+  fill: transparent;
+}
+
+text {
+  fill: black;
+  font-size: 16.5px;
+}
+
+body {
+  font-family: 'Poppins';
+  font-size: 20px;
 }
 
 
