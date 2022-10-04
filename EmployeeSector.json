@@ -5,8 +5,8 @@
     "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
     "format": {"parse": {"profits": "number"}}
   },
-  "width": "container",
-  "height": 800,
+  "width": 800,
+  "height": 450,
   "background": null,
   "params": [
     {
@@ -17,7 +17,7 @@
         "labels": ["2019", "2020", "2021"],
         "name": "Select Year: "
       },
-      "value":"2019"
+      "value": "2019"
     }
   ],
   "transform": [
@@ -29,15 +29,11 @@
     {"filter": "datum.rank <= 10"}
   ],
   "encoding": {
-    "order": {
-      "field": "profits",
-      "type": "quantitative",
-      "sort": "descending"
-    },
+    "order": {"field": "profits", "type": "quantitative", "sort": "descending"},
     "theta": {
       "field": "profits",
       "type": "quantitative",
-      "stack":true,
+      "stack": true,
       "scale": {"type": "linear", "rangeMax": 1.5708, "rangeMin": -1.5708}
     },
     "color": {
@@ -51,78 +47,150 @@
         "titlePadding": 10,
         "labelOffset": 13
       },
-      "scale":{
-        "domain":["Energy", "Technology", "Telecommunications", "Financials", "Retailing"],
-        "range":["#F01523", "#A2AAAD", "#00A8E0", "#211E1E", "#FF9900"]
+      "scale": {
+        "domain": [
+          "Energy",
+          "Technology",
+          "Telecommunications",
+          "Financials",
+          "Retailing"
+        ],
+        "range": ["#F01523", "#A2AAAD", "#00A8E0", "#211E1E", "#FF9900"]
       }
     }
   },
   "layer": [
-    {"mark": {"type": "arc", "innerRadius": 130},
-    "encoding": {
-      "opacity": {"value":0.78},
-      "stroke": {"value":"black"},
-      "tooltip": [
-      {"field": "name", "type": "ordinal", "title": "Company"},
-      {
-        "field": "employees",
-        "type": "quantitative",
-        "title": "Number of Employees"
+    {
+      "mark": {"type": "arc", "innerRadius": 150},
+      "encoding": {
+        "opacity": {"value": 0.78},
+        "stroke": {"value": "black"},
+        "tooltip": [
+          {"field": "name", "type": "ordinal", "title": "Company"},
+          {
+            "field": "employees",
+            "type": "quantitative",
+            "title": "Number of Employees"
+          },
+          {"field": "year", "type": "nominal", "title": "Year Listed"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/apple.png",
+        "width": 40,
+        "height":40,
+        "x": 150,
+        "y": 140
       },
-      {"field": "year", "type": "nominal", "title": "Year Listed"}
-    ]}},
-    {
-      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/apple.png", "width":30, "height":30, "x":60, "y":120},
       "encoding": {
-        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+        "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
       }
     },
     {
-      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/JP-Morgan-Chase-Logo.png", "width":90, "height":35, "x":95, "y":35},
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/JP-Morgan-Chase-Logo.png",
+        "width": 90,
+        "height": 85,
+        "x": 205,
+        "y": 35
+      },
       "encoding": {
-        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+        "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
       }
     },
     {
-      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/alphabet.png", "width":65, "height":55, "x":175, "y":-2},
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/alphabet.png",
+        "width": 95,
+        "height": 95,
+        "x": 295,
+        "y": -9
+      },
       "encoding": {
-        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+        "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
       }
     },
     {
-      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/bank_of_america.png", "width":35, "height":35, "x":250, "y":-15},
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/bank_of_america.png",
+        "width": 50,
+        "height": 50,
+        "x": 400,
+        "y": -25
+      },
       "encoding": {
-        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+        "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
       }
     },
     {
-      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/Wells_Fargo-Logo.wine.png", "width":45, "height":45, "x":300, "y":-10},
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/Wells_Fargo-Logo.wine.png",
+        "width": 70,
+        "height": 70,
+        "x": 470,
+        "y": -20
+      },
       "encoding": {
-        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+        "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
       }
     },
     {
-      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/facebook.png", "width":20, "height":20, "x":345, "y":10},
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/facebook.png",
+        "width": 35,
+        "height": 35,
+        "x": 535,
+        "y": 8
+      },
       "encoding": {
-        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+        "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
       }
     },
     {
-      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/intel.png", "width":45, "height":45, "x":395, "y":40},
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/intel.png",
+        "width": 65,
+        "height": 65,
+        "x": 590,
+        "y": 50
+      },
       "encoding": {
-        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+        "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
       }
     },
     {
-      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/atnt.png", "width":45, "height":45, "x":435, "y":115},
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/atnt.png",
+        "width": 75,
+        "height": 75,
+        "x": 640,
+        "y": 145
+      },
       "encoding": {
-        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+        "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
       }
     },
     {
-      "mark": {"type": "image","url":"https://joeechua.github.io/FIT3179_A2/images/citi.png", "width":25, "height":25, "x":445, "y":155},
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/citi.png",
+        "width": 45,
+        "height": 45,
+        "x": 655,
+        "y": 200
+      },
       "encoding": {
-        "opacity":{"value":{"expr":"year_selection == 2019 ? 1:0"}}
+        "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
       }
     }
   ]
