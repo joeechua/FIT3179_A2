@@ -6,7 +6,7 @@
     "format": {"parse": {"employees": "number"}}
   },
   "width": 800,
-  "height":1,
+  "height": 1,
   "background": null,
   "params": [
     {
@@ -36,7 +36,6 @@
       "field": "employees",
       "scale": {"type": "sqrt", "zero": true, "rangeMin": 70}
     },
-    "angle": {},
     "color": {
       "field": "hqstate",
       "type": "nominal",
@@ -50,6 +49,10 @@
         "orient": "none",
         "legendX": 720,
         "legendY": 5
+      },
+      "scale":{
+        "domain":["Arkansas",  "District of Columbia" ,"Georgia" , "Minnesota" , "Nebraska", "New York" , "Ohio" , "Tennessee","Washington"],
+        "range":["#004c91", "#333465", "#ee7125", "#E80018", "#2d2d94", "#006699", "#0468b3", "#FF6600", "#FF9900"]
       }
     }
   },
@@ -65,6 +68,7 @@
     {
       "mark": {"type": "arc", "innerRadius": 260, "stroke": "black"},
       "encoding": {
+        "opacity":{"value":0.8},
         "tooltip": [
           {"field": "name", "type": "ordinal", "title": "Company"},
           {

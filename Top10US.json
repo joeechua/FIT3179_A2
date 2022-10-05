@@ -1,68 +1,67 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 450,
-    "height":400,
-    "background":null,
-    "title":"Top 10 Companies in USA",
-    "description": "Google's stock price over time.",
-    "data": {"url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
-    "format": {"parse": {"year":"number"}} },
-    "params": [
-      {
-        "name": "highlight",
-        "select": {"type": "point", "on": "mouseover"}
-      },
-      {"name": "select", "select": "point"}
-    ],
-     "transform": [{
-          "window": [{
-            "op": "rank",
-            "as": "r"
-          }],
-          "sort": [{ "field": "r", "order": "descending" }],
-          "groupby":["year"]
-        }, {
-          "filter": "datum.r <= 10"
-        }],
-    "mark": {
-      "type": "line",
-      "point":true
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 550,
+  "height": 350,
+  "background": null,
+  "title":null, 
+  "description": "Google's stock price over time.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
+    "format": {"parse": {"year": "number", "profits":"number"}}
+  },
+  "params": [
+    {"name": "highlight", "select": {"type": "point", "on": "mouseover"}},
+    {"name": "select", "select": "point"}
+  ],
+  "transform": [
+    {
+      "window": [{"op": "rank", "as": "r"}],
+      "sort": [{"field": "r", "order": "descending"}],
+      "groupby": ["year"]
     },
-    "encoding": {
-      "x": {"field": "year", "type": "nominal", "axis":{"domain": false}},
-      "y": {"field": "r", "type": "quantitative", "sort":"descending", "title": "US Rank", "axis":{"domain": false,"position":1}},
-      "detail": {"field": "name", "type": "nominal"},
-      "tooltip":[
-        {"field":"name"},
-        {"field":"profits"},
-        {"field": "rank", "title": "Overall Rank"},
-        {"field":"r", "title":"US Rank"}
+    {"filter": "datum.r <= 10"}
+  ],
+  "mark": {"type": "line", "point": {"size":150, "stroke":"lightgrey", "strokeWidth":0}},
+  "encoding": {
+    "x": {"field": "year", "type": "nominal", "axis": {"domain": false,"grid": false, "labelAngle":360, "title":null, "labelFontSize":13, "labelPadding":10}},
+    "y": {
+      "field": "r",
+      "type": "quantitative",
+      "sort": "descending",
+      "title": "US Rank",
+      "axis": {"domain": false, "grid": false, "ticks":false, "labelFontSize":13, "labelAlign":"center"},
+      "scale":{"domain":[1,10]}
+    },
+    "detail": {"field": "name", "type": "nominal"},
+    "tooltip": [
+      {"field": "name"},
+      {"field": "revenues"},
+      {"field": "rank", "title": "Overall Rank"},
+      {"field": "r", "title": "US Rank"}
+    ],
+    "strokeWidth": {
+      "condition": [
+        {"param": "select", "empty": false, "value": 7},
+        {"param": "highlight", "empty": false, "value": 7}
       ],
-      "strokeWidth": {
-        "condition": [
-          {
-            "param": "select",
-            "empty": false,
-            "value": 3
-          },
-          {
-            "param": "highlight",
-            "empty": false,
-            "value": 3
-          }
-        ],
-        "value": 3
+      "value": 4
+    },
+    "opacity":{"value":0.88},
+    "color": {
+      "field":"name",
+      "type":"nominal",
+      "condition": [{"param": "highlight", "empty": false, "value": "black"}],
+      "scale":{
+        "domain":["Amazon", "Walmart", "Apple", "Berkshire Hathaway", "AmerisourceBergen", "AT&T", "McKesson", "UnitedHealth Group", "Exxon Mobil", "CVS Health", "Alphabet"],
+        "range":["#FF9900", "#004c91", "#A2AAAD", "#2d2d94", "#00509D", "#00a8e0", "#174EA0", "#1e3d6a", "#F01523", "#CC0000", "#F01716"]
       },
-      "color":{
-        "condition":[
-          {
-            "param": "highlight",
-            "empty":false,
-            "value":"red"
-          }
-        ],
-        "value":"#01041D"
+      "legend":{
+        "title":"Companies",
+        "columns":2,
+        "orient":"none",
+        "legendX":500,
+        "legendY":-5
       }
     }
   }
-  
+}
