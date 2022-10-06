@@ -3,20 +3,22 @@
   "config": {"view": {"stroke": ""}},
   "background": null,
   "title": null,
-  "width": 530,
+  "width": 1500,
   "height": 340,
   "data": {
-    "values":[
-      {"ceowoman":"no", "x": 1, "y":1},
-      {"ceowoman":"no", "x": 1, "y":2},
-      {"ceowoman":"no", "x": 2, "y":2},
-      {"ceowoman":"no", "x": 3, "y":2},
-      {"ceowoman":"yes", "x": 4, "y":2},
-      {"ceowoman":"no", "x": 1, "y":3},
-      {"ceowoman":"no", "x": 2, "y":3},
-      {"ceowoman":"no", "x": 3, "y":3},
-      {"ceowoman":"no", "x": 2, "y":1},
-      {"ceowoman":"no", "x": 3, "y":1}
+    "values": [
+      {"ceowoman": "no", "x": 1, "y": 1},
+      {"ceowoman": "no", "x": 2, "y": 1},
+      {"ceowoman": "no", "x": 3, "y": 1},
+      {"ceowoman": "no", "x": 4, "y": 1},
+      {"ceowoman": "no", "x": 5, "y": 1},
+      {"ceowoman": "yes", "x": 6, "y": 1},
+      {"ceowoman": "no", "x": 7, "y": 1},
+      {"ceowoman": "no", "x": 8, "y": 1},
+      {"ceowoman": "no", "x": 9, "y": 1},
+      {"ceowoman": "no", "x": 10, "y": 1},
+      {"ceowoman": "no", "x": 11, "y": 1},
+      {"ceowoman": "no", "x": 12, "y": 1}
     ]
   },
   "mark": {"type": "point", "filled": true},
@@ -25,7 +27,6 @@
     "y": {"field": "y", "type": "ordinal", "axis": null},
     "shape": {
       "value": "M1.7 -1.7h-0.8c0.3 -0.3 0.6 -0.5 0.6 -0.9c0 -0.6 -0.4 -1 -1 -1c-0.6 0 -1 0.4 -1 1c0 0.4 0.2 0.7 0.6 0.9h-0.8c-0.4 0 -0.7 0.3 -0.7 0.6v1.9c0 0.3 0.3 0.6 0.6 0.6h0.2c0 0 0 0.1 0 0.1v1.9c0 0.3 0.2 0.6 0.3 0.6h1.3c0.2 0 0.3 -0.3 0.3 -0.6v-1.8c0 0 0 -0.1 0 -0.1h0.2c0.3 0 0.6 -0.3 0.6 -0.6v-2c0.2 -0.3 -0.1 -0.6 -0.4 -0.6z"
-
     },
     "opacity": {"value": 1},
     "color": {
