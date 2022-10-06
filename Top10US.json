@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1150,
+  "width": 1200,
   "height": 350,
   "background": null,
   "title": null,
@@ -103,7 +103,7 @@
         "title": "Companies",
         "columns": 2,
         "orient": "none",
-        "legendX":1050,
+        "legendX":1000,
         "legendY":270
       }
     }
