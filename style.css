@@ -78,6 +78,22 @@ body {
   font-size: 20px;
 }
 
+#hr {
+  -moz-transform: rotate(55deg);  
+    -o-transform: rotate(55deg);  
+-webkit-transform: rotate(55deg);  
+   -ms-transform: rotate(55deg);  
+       transform: rotate(55deg); 
+}
+
+#hr2 {
+  -moz-transform: rotate(165deg);  
+    -o-transform: rotate(165deg);  
+-webkit-transform: rotate(165deg);  
+   -ms-transform: rotate(165deg);  
+       transform: rotate(165deg); 
+}
+
 
 /* THE UP BUTTOn */
 /* #upButton {
