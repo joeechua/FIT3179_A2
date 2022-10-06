@@ -3,8 +3,8 @@
   "config": {"view": {"stroke": ""}},
   "background": null,
   "title": null,
-  "width": 1300,
-  "height": 340,
+  "width": 1350,
+  "height": 60,
   "data": {
     "values": [
       {"ceowoman": "no", "x": 1, "y": 1},
