@@ -66,13 +66,19 @@
     <div class="row">
       <div id="vis3"></div>
     </div>
-    <div class="row">
-      <div id="vis4"></div>
+    <div class="row" style="padding-top: 50px;">
+      <div style="padding-left: 100px; padding-top:100px;"> 
+        <br>
+        <span>Bunch of words to talk about the gauge</span> 
+      </div>
+      <div id="vis4" style="padding-left: 250px;"></div>
     </div>
-    <div class="row">
+    <br>
+    <center><span style="font-size: 30px; font-weight:bold;">Profit per Employee</span></center>
+    <div class="row" style="padding-top: 50px; padding-left:280px;">
       <div id="vis"></div>
     </div>
-    <div class="row">
+    <div class="row" style="padding-top:50px;">
       <div id="vis5" style="padding-left: 200px;"></div>
     </div>
     <div class="row" style="font-size: 30px;">
@@ -91,7 +97,7 @@
 
 <script type="text/javascript">
 
-var spec = "https://joeechua.github.io/FIT3179_A2/ChloroplethMap.json";
+var spec = "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/ChloroplethMap.json";
 
       vegaEmbed('#vis', spec).then(function(result) {
       }).catch(console.error);
