@@ -5,7 +5,7 @@
     "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
     "format": {"parse": {"profits": "number"}}
   },
-  "width":80,
+  "width": -200,
   "height": 520,
   "background": null,
   "params": [
@@ -86,7 +86,7 @@
         "width": 40,
         "height": 40,
         "x": -110,
-        "y": 510
+        "y": 525
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
@@ -98,7 +98,7 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/JP-Morgan-Chase-Logo.png",
         "width": 90,
         "height": 85,
-        "x": -220,
+        "x": -250,
         "y": 435
       },
       "encoding": {
@@ -111,7 +111,7 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/alphabet.png",
         "width": 95,
         "height": 95,
-        "x": -255,
+        "x": -290,
         "y": 345
       },
       "encoding": {
@@ -124,7 +124,7 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/bank_of_america.png",
         "width": 50,
         "height": 50,
-        "x": -260,
+        "x": -300,
         "y": 270
       },
       "encoding": {
@@ -137,7 +137,7 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/Wells_Fargo-Logo.wine.png",
         "width": 70,
         "height": 70,
-        "x": -250,
+        "x": -280,
         "y": 185
       },
       "encoding": {
@@ -150,7 +150,7 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/facebook.png",
         "width": 35,
         "height": 35,
-        "x":-220,
+        "x": -250,
         "y": 120
       },
       "encoding": {
@@ -163,7 +163,7 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/intel.png",
         "width": 65,
         "height": 65,
-        "x": -185,
+        "x": -215,
         "y": 65
       },
       "encoding": {
@@ -176,7 +176,7 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/atnt.png",
         "width": 75,
         "height": 75,
-        "x": -50,
+        "x": -80,
         "y": -10
       },
       "encoding": {
@@ -189,7 +189,7 @@
         "url": "https://joeechua.github.io/FIT3179_A2/images/citi.png",
         "width": 45,
         "height": 45,
-        "x": 10,
+        "x": -20,
         "y": -20
       },
       "encoding": {
