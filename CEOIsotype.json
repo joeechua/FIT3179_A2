@@ -3,22 +3,22 @@
   "config": {"view": {"stroke": ""}},
   "background": null,
   "title": null,
-  "width": 1320,
-  "height": 60,
+  "width": 400,
+  "height": 300,
   "data": {
     "values": [
       {"ceowoman": "no", "x": 1, "y": 1},
       {"ceowoman": "no", "x": 2, "y": 1},
       {"ceowoman": "no", "x": 3, "y": 1},
       {"ceowoman": "no", "x": 4, "y": 1},
-      {"ceowoman": "no", "x": 5, "y": 1},
-      {"ceowoman": "yes", "x": 6, "y": 1},
-      {"ceowoman": "no", "x": 7, "y": 1},
-      {"ceowoman": "no", "x": 8, "y": 1},
-      {"ceowoman": "no", "x": 9, "y": 1},
-      {"ceowoman": "no", "x": 10, "y": 1},
-      {"ceowoman": "no", "x": 11, "y": 1},
-      {"ceowoman": "no", "x": 12, "y": 1}
+      {"ceowoman": "no", "x": 1, "y": 2},
+      {"ceowoman": "yes", "x":2, "y": 2},
+      {"ceowoman": "no", "x": 3, "y": 2},
+      {"ceowoman": "no", "x": 4, "y": 2},
+      {"ceowoman": "no", "x": 1, "y": 3},
+      {"ceowoman": "no", "x": 2, "y": 3},
+      {"ceowoman": "no", "x": 3, "y": 3},
+      {"ceowoman": "no", "x": 4, "y": 3}
     ]
   },
   "mark": {"type": "point", "filled": true},
