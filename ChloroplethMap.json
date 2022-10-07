@@ -123,17 +123,12 @@
       }
     }
   ],
-  "projection": {
-    "type": "albersUsa"
-  },
+  "projection": {"type": "albersUsa"},
   "layer": [
     {
       "data": {
         "url": "https://raw.githubusercontent.com/joeechua/W9_HW/main/US_MAP.json",
-        "format": {
-          "type": "topojson",
-          "feature": "US_States_SOVI_Infographics"
-        }
+        "format": {"type": "topojson", "feature": "US_States_SOVI_Infographics"}
       },
       "transform": [
         {
@@ -143,92 +138,124 @@
       ],
       "mark": {
         "type": "geoshape",
-        "fill": "#ddd",
+        "fill": "lightgrey",
         "stroke": "white",
         "strokeWidth": 1
       },
-      "encoding": {
-        "tooltip": {
-          "field": "note"
-        }
-      }
+      "encoding": {"tooltip": {"field": "note"}}
     },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
-    "format": {"parse": {"profits": "number", "employees":"number"}}
+        "format": {"parse": {"profits": "number", "employees": "number"}}
       },
       "transform": [
         {
-      "lookup": "hqstate",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/joeechua/W9_HW/main/US_MAP.json",
-          "format": {
-            "type": "topojson",
-            "feature": "US_States_SOVI_Infographics"
+          "lookup": "hqstate",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/joeechua/W9_HW/main/US_MAP.json",
+              "format": {
+                "type": "topojson",
+                "feature": "US_States_SOVI_Infographics"
+              }
+            },
+            "key": "properties.STATE_NAME"
+          },
+          "as": "state"
+        },
+        {"filter": "year_selection == null || datum.year == year_selection"},
+        {
+          "filter": "state_selection == null || datum.hqstate == state_selection"
+        },
+        {
+          "joinaggregate": [
+            {"op": "sum", "field": "profits", "as": "TotalCount"}
+          ],
+          "groupby": ["hqstate"]
+        },
+        {
+          "calculate": "datum.TotalCount/datum.employees",
+          "as": "perc_prof_per_emp"
+        },
+        {"calculate": "datum.perc_prof_per_emp *1000000", "as": "proft_per_emp"}
+      ],
+      "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+      "encoding": {
+        "shape": {"field": "state", "type": "geojson"},
+        "color": {
+          "field": "proft_per_emp",
+          "type": "quantitative",
+          "legend": {
+            "title": "Total Profits in 100 Million USD",
+            "titleFontSize": 11,
+            "titleAnchor": "start",
+            "direction": "vertical",
+            "orient": "none",
+            "legendX": 820,
+            "labelFontSize": 10,
+            "titleLimit": 1000
+          },
+          "scale": {
+            "type": "threshold",
+            "domain": [200000, 400000, 600000, 800000, 1000000, 1200000],
+            "range": [
+              "#64B6EE",
+              "#4C9ADD",
+              "#427BD2",
+              "#3364C0",
+              "#2C43B0",
+              "#1E2791",
+              "#0B1D51"
+            ]
           }
         },
-        "key": "properties.STATE_NAME"
-      },
-      "as": "state"
-    },
-        {"filter": "year_selection == null || datum.year == year_selection"},
-        {"filter": "state_selection == null || datum.hqstate == state_selection"},
-        {
-      "joinaggregate": [{"op": "sum", "field": "profits", "as": "TotalCount"}],
-      "groupby": ["hqstate"]
-    },
-    {"calculate": "datum.TotalCount/datum.employees", "as": "perc_prof_per_emp"},
-    {"calculate": "datum.perc_prof_per_emp *1000000", "as":"proft_per_emp"}
-      ],
-      "mark": {
-        "type": "geoshape",
-        "stroke": "#fff",
-        "strokeWidth": 0.5
-      },
-      "encoding": {
-    "shape": {"field": "state", "type": "geojson"},
-    "color": {
-      "field": "proft_per_emp",
-      "type": "quantitative",
-      "legend": {
-        "title": "Total Profits in 100 Million USD",
-        "titleFontSize": 11,
-        "titleAnchor": "start",
-        "direction": "vertical",
-        "orient": "none",
-        "legendX":820,
-        "labelFontSize": 10,
-        "titleLimit": 1000
-      },
-      "scale": {
-        "type": "threshold",
-        "domain": [200000, 400000, 600000, 800000, 1000000, 1200000],
-        "range": [
-          "#64B6EE",
-          "#4C9ADD",
-          "#427BD2",
-          "#3364C0",
-          "#2C43B0",
-          "#1E2791",
-          "#0B1D51"
+        "tooltip": [
+          {"field": "hqstate", "type": "nominal", "title": "State"},
+          {
+            "field": "TotalCount",
+            "type": "quantitative",
+            "title": "Total Profit in 100 Million USD",
+            "format": ".0f"
+          },
+          {"field": "proft_per_emp", "format": ".0f"}
         ]
       }
     },
-    "tooltip": [
-      {"field": "hqstate", "type": "nominal", "title": "State"},
-      {
-        "field": "TotalCount",
-        "type": "quantitative",
-        "title": "Total Profit in 100 Million USD",
-        "format":".0f"
-      },
-      {"field":"proft_per_emp",
-      "format":".0f"}
-    ]
-  }
-    }
+    {
+                "data": 
+                {
+                  "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_latlong.csv",
+                  "format":{"parse":{"Revenues":"number", "Longitude":"number", "Latitude":"number"}}
+                },
+                "mark": {"type": "circle", "tooltip": {"content": "data"}},
+                "encoding": {
+                  "longitude": {"field": "Longitude", "type": "quantitative"},
+                  "latitude": {"field": "Latitude", "type": "quantitative"},
+                  "size": {
+                    "field": "Revenues",
+                    "title":"Revenue",
+                    "type": "quantitative",
+                    "scale": {"domain": [0, 400000], "range": [100, 2500]},
+                    "legend": {
+                      "title": "Revenue",
+                      "titleFontSize":20,
+                      "direction":"horizontal", 
+                      "orient":"bottom", 
+                      "labelFontSize": 20,
+                      "titleLimit":1000
+
+                  }
+
+                    
+                  },
+                  
+                  "tooltip":[
+                    {"field":"State","type":"nominal","title":"States"},
+                    {"field":"Revenues","type":"nominal","title":"Revenues"}
+
+                  ]
+                }}
   ],
   "config": {}
 }
