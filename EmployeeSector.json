@@ -41,14 +41,14 @@
       "type": "nominal",
       "legend": {
         "title": "Sector",
-        "titleFontSize": 13,
-        "labelFontSize": 12,
+        "titleFontSize": 18,
+        "labelFontSize": 15,
         "titleLimit": 1000,
         "titlePadding": 10,
         "labelOffset": 13,
         "orient": "none",
-        "legendX": -400,
-        "legendY": 5
+        "legendX": -450,
+        "legendY": 3
       },
       "scale": {
         "domain": [

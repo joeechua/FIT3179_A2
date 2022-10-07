@@ -41,13 +41,13 @@
       "type": "nominal",
       "legend": {
         "title": "State",
-        "titleFontSize": 13,
-        "labelFontSize": 12,
+        "titleFontSize": 18,
+        "labelFontSize": 15,
         "titleLimit": 1000,
         "titlePadding": 10,
         "labelOffset": 13,
         "orient": "none",
-        "legendX":300
+        "legendX":350
       },
       "scale": {
         "domain": [
