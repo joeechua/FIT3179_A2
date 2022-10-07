@@ -17,7 +17,7 @@
         "labels": ["2019", "2020", "2021"],
         "name": "Select Year: "
       },
-      "value": "2019"
+      "value": "2021"
     }
   ],
   "transform": [
@@ -47,7 +47,7 @@
         "titlePadding": 10,
         "labelOffset": 13,
         "orient": "none",
-        "legendX": -450,
+        "legendX": -470,
         "legendY": 3
       },
       "scale": {
@@ -75,7 +75,8 @@
             "type": "quantitative",
             "title": "Number of Employees"
           },
-          {"field": "year", "type": "nominal", "title": "Year Listed"}
+          {"field": "year", "type": "nominal", "title": "Year Listed"},
+          {"field":"sector"}
         ]
       }
     },
@@ -194,6 +195,266 @@
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/berkshire-hathaway.png",
+        "width": 120,
+        "height": 120,
+        "x": -110,
+        "y": 525
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2020 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/apple.png",
+        "width": 40,
+        "height": 40,
+        "x": -245,
+        "y": 415
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2020 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/windows.jpg",
+        "width": 35,
+        "height": 35,
+        "x": -290,
+        "y": 315
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2020 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/JP-Morgan-Chase-Logo.png",
+        "width": 90,
+        "height": 90,
+        "x": -310,
+        "y": 220
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2020 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/alphabet.png",
+        "width": 95,
+        "height": 95,
+        "x": -280,
+        "y": 135
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2020 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/bank_of_america.png",
+        "width": 55,
+        "height": 55,
+        "x": -235,
+        "y": 80
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2020 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/intel.png",
+        "width": 65,
+        "height": 65,
+        "x": -175,
+        "y": 25
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2020 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/Wells_Fargo-Logo.wine.png",
+        "width": 65,
+        "height": 65,
+        "x": -120,
+        "y": -10
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2020 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/citi.png",
+        "width": 35,
+        "height": 25,
+        "x": -70,
+        "y": -20
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2020 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/verizon.png",
+        "width": 52,
+        "height": 25,
+        "x": -15,
+        "y": -20
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2020 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/apple.png",
+        "width": 40,
+        "height": 40,
+        "x": -90,
+        "y": 535
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2021 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/windows.jpg",
+        "width": 35,
+        "height": 35,
+        "x": -205,
+        "y": 475
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2021 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/berkshire-hathaway.png",
+        "width": 135,
+        "height": 135,
+        "x": -300,
+        "y": 350
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2021 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/alphabet.png",
+        "width": 95,
+        "height": 95,
+        "x": -315,
+        "y": 250
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2021 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/facebook.png",
+        "width": 35,
+        "height": 35,
+        "x": -280,
+        "y": 155
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2021 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/JP-Morgan-Chase-Logo.png",
+        "width": 75,
+        "height": 55,
+        "x": -245,
+        "y": 80
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2021 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/amazon.png",
+        "width": 115,
+        "height": 85,
+        "x": -195,
+        "y": 35
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2021 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/intel.png",
+        "width": 55,
+        "height": 55,
+        "x": -135,
+        "y": -5
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2021 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/bank_of_america.png",
+        "width": 45,
+        "height": 25,
+        "x": -75,
+        "y": -20
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2021 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/verizon.png",
+        "width": 52,
+        "height": 25,
+        "x": -15,
+        "y": -20
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2021 ? 1:0"}}
       }
     }
   ]
