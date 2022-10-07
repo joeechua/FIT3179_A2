@@ -5,8 +5,8 @@
     "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
     "format": {"parse": {"employees": "number"}}
   },
-  "width": 800,
-  "height": 1,
+  "width": 40,
+  "height": 520,
   "background": null,
   "params": [
     {
@@ -30,11 +30,11 @@
       "field": "employees",
       "type": "quantitative",
       "stack": true,
-      "scale": {"type": "linear", "rangeMax": 4.7, "rangeMin": 1.5708}
+      "scale": {"type": "linear", "rangeMax": 3.14, "rangeMin": -0.01}
     },
     "radius": {
       "field": "employees",
-      "scale": {"type": "sqrt", "zero": true, "rangeMin": 70}
+      "scale": {"type": "sqrt", "zero": true, "rangeMin": 120}
     },
     "color": {
       "field": "hqstate",
@@ -47,12 +47,31 @@
         "titlePadding": 10,
         "labelOffset": 13,
         "orient": "none",
-        "legendX": 720,
-        "legendY": 5
+        "legendX":300
       },
-      "scale":{
-        "domain":["Arkansas",  "District of Columbia" ,"Georgia" , "Minnesota" , "Nebraska", "New York" , "Ohio" , "Tennessee","Washington"],
-        "range":["#004c91", "#333465", "#ee7125", "#E80018", "#2d2d94", "#006699", "#0468b3", "#FF6600", "#FF9900"]
+      "scale": {
+        "domain": [
+          "Arkansas",
+          "District Of Columbia",
+          "Georgia",
+          "Minnesota",
+          "Nebraska",
+          "New York",
+          "Ohio",
+          "Tennessee",
+          "Washington"
+        ],
+        "range": [
+          "#004c91",
+          "black",
+          "#ee7125",
+          "#E80018",
+          "#2d2d94",
+          "#006699",
+          "#0468b3",
+          "#FF6600",
+          "#FF9900"
+        ]
       }
     }
   },
@@ -68,7 +87,7 @@
     {
       "mark": {"type": "arc", "innerRadius": 260, "stroke": "black"},
       "encoding": {
-        "opacity":{"value":0.8},
+        "opacity": {"value": 0.8},
         "tooltip": [
           {"field": "name", "type": "ordinal", "title": "Company"},
           {
@@ -77,7 +96,8 @@
             "title": "Number of Employees"
           },
           {"field": "year", "type": "nominal", "title": "Year Listed"},
-          {"field": "sector", "type": "nominal", "title": "Sector"}
+          {"field": "sector", "type": "nominal", "title": "Sector"},
+          {"field":"hqstate"}
         ]
       }
     }
