@@ -20,12 +20,10 @@
           "Facebook",
           "Amgen",
           "Intel",
-          "Meta Platforms",
           "Bank of America Corp.",
           "Eli Lilly",
-          "JPMorgan Chase & Co.",
-          "Philip Morris International",
           "JPMorgan Chase",
+          "Philip Morris International",
           "Alphabet",
           "Apple",
           "Pfizer",
@@ -172,12 +170,10 @@
           "Facebook",
           "Amgen",
           "Intel",
-          "Meta Platforms",
           "Bank of America Corp.",
           "Eli Lilly",
-          "JPMorgan Chase & Co.",
-          "Philip Morris International",
           "JPMorgan Chase",
+          "Philip Morris International",
           "Alphabet",
           "Apple",
           "Pfizer",
@@ -364,10 +360,16 @@
           "type": "quantitative",
           "scale": {
             "domain": [0, 60, 80, 100],
-            "range": ["#0B1D51", "lightgreen", "white", "#BF0A30"]
+            "range": ["#0B1D51", "lightblue", "white", "#BF0A30"]
           },
-          "legend": {"orient": "none", "title": "Efficiency Ratio",
-          "legendX":-20, "legendY":360, "direction": "horizontal", "gradientLength":375}
+          "legend": {
+            "orient": "none",
+            "title": "Efficiency Ratio",
+            "legendX": -20,
+            "legendY": 360,
+            "direction": "horizontal",
+            "gradientLength": 365
+          }
         },
         "tooltip": [
           {"field": "expenses"},
