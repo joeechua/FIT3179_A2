@@ -27,12 +27,12 @@
     },
     "mark": "bar",
     "encoding": {
-      "opacity":{"value":0.85},
-      "x": {"field": {"repeat": "repeat"}, "bin": {"maxbins": 25}},
-      "y": {"aggregate": "count", "axis":{"grid": false}},
+      "opacity": {"value": 0.85},
+      "x": {"field": {"repeat": "repeat"}, "bin": {"maxbins": 15}, "axis":{"labelFontSize":15}},
+      "y": {"aggregate": "count", "axis": {"grid": false}},
       "color": {"value": "#960018"}
     },
-    "height":250,
-    "width":610
+    "height": 250,
+    "width": 610
   }
 }

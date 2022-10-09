@@ -367,7 +367,7 @@
             "range": ["#0B1D51", "lightgreen", "white", "#BF0A30"]
           },
           "legend": {"orient": "none", "title": "Efficiency Ratio",
-          "legendX":-20, "legendY":360, "direction": "horizontal", "gradientLength":315}
+          "legendX":-20, "legendY":360, "direction": "horizontal", "gradientLength":325}
         },
         "tooltip": [
           {"field": "expenses"},
