@@ -24,7 +24,7 @@
     "order": {
       "field": "employees",
       "type": "quantitative",
-      "sort": "descending"
+      "sort": "ascending"
     },
     "theta": {
       "field": "employees",
