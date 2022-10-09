@@ -6,6 +6,11 @@
     
 } */
 
+#vg-tooltip-element tr:nth-child(n) td:first-child {
+  font-weight: bolder;
+  color:black;
+}
+
 * {
   margin: 0;
   padding: 0;
