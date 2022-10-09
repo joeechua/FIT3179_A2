@@ -34,7 +34,7 @@
     },
     "radius": {
       "field": "employees",
-      "scale": {"type": "sqrt", "zero": true, "rangeMin": 120}
+      "scale": {"type": "sqrt", "zero": true, "rangeMin": 300}
     },
     "color": {
       "field": "hqstate",
@@ -47,7 +47,7 @@
         "titlePadding": 10,
         "labelOffset": 13,
         "orient": "none",
-        "legendX":330,
+        "legendX": 330,
         "legendY": 205,
         "columns": 3
       },
@@ -99,9 +99,12 @@
           },
           {"field": "year", "type": "nominal", "title": "Year Listed"},
           {"field": "sector", "type": "nominal", "title": "Sector"},
-          {"field":"hqstate"}
+          {"field": "hqstate"}
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    
+  }
 }

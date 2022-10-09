@@ -16,9 +16,8 @@
     <div class="header" style="margin-top: 10; padding-left: 40px;">
       <h1>
         <br>
-        <span class="word" style="font-size:50px; font-weight: bold;">The</span>
         <span class="word" style="font-size:50px; color:#BF0A30; font-weight: bold;">American</span>
-        <span class="word" style="font-size:50px; color:#002868; font-weight: bold;">Dream</span><br>
+        <span class="word" style="font-size:50px; color:#002868; font-weight: bold;">Fortune</span><br>
         <span class="word" style="font-size:25px; font-weight:200;">BREAKING DOWN THE FORTUNE 500 COMPANIES IN AMERICA BY STATE, SECTOR, FINANCES, AND LEADERSHIP</span>
       </h1>
     </div>
@@ -60,8 +59,8 @@
       <p><b>TOP 10 COMPANIES</b>, SORTED</p>
     </div>
     <div class="row" style="margin-left:-55px; padding-top: 55px;">
-      <div id="vis6" class="top" style="margin-left:100px; margin-top:-48px"></div>
-      <div id="vis7" class="below" style="margin-left: -50px;"></div>
+      <div id="vis6" class="top2" style="margin-left:100px; margin-top:-48px"></div>
+      <div id="vis7" class="below2" style="margin-left: -50px;"></div>
       <!-- <div id="vis6" style="margin-left: 295px;" class="top"></div>
       <div style="margin-left:425px ; margin-top:65px;">
         <svg viewBox="0 0 700 400">
@@ -78,17 +77,23 @@
         <div id="vis7"v></div>
       </div> -->
     </div>
-    <center><span style="font-size: 30px; font-weight:bold; margin-top: 50px;">OVERSPENDING ?</span> </center>
+    <center style=" padding-top: 50px;"><span style="font-size: 30px; font-weight:bold;">OVERSPENDING ?</span> </center>
     <div class="row" style="margin-top: 20px;">
-      <div style="margin-left: 40px; margin-top:0px; padding-right:40px"> 
+      <div style="margin-left: 40px; margin-top:0px; padding-right:0px; max-width: 500px;">
+        <p style="padding-top: 60px;">the <i>efficiency ratio</i><b>*</b> is a measure of the companies spendings. Companies usually aim for the sweet-spot of <b>60-80%</b>
+        but more often than not, fail.</p>
         <br>
-        <br>
-        <p style="padding-top: 60px;">the <i>efficiency ratio</i><b>*</b> is the golden ratio of business. Companies usually aim for the sweet-spot of <b>60-80%</b>
-        but more often than not, fail. Curious to see if your favourite company succeeds?</p>
+        <p>The lower the efficiency ratio, the higher a company's profits. Curious to see if your favourite company succeeds?</p>
         <br>
         <p><b>*</b><i>efficiency ratio</i> = <i>expenses / revenue</i></p>
       </div>
-      <div id="vis4" style="margin-left: 200px; padding-right: 90px;"></div>
+      <div id="vis4" style="padding-left: -90px; padding-right: 50px;"></div>
+      <div>
+        <p style="padding-top: 60px;">If the company's efficiency ratio is above <b>80%</b>, it is likely that they are overspending.</p>
+        <br>
+        <p>If your risk tolerance is low, we would recommend against applying or investing in these companies</p>
+        <br>
+      </div>
     </div>
     <br>
     <center><span style="font-size: 30px; font-weight:bold;">Profits and Revenues by State</span></center>
@@ -167,6 +172,7 @@ var spec = "https://joeechua.github.io/FIT3179_A2/DistributionBars.json";
 
 vegaEmbed('#vis5', spec).then(function(result) {
 }).catch(console.error);
+
 
 var spec = "https://joeechua.github.io/FIT3179_A2/EmployeeSector.json";
 
