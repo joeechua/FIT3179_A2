@@ -47,7 +47,9 @@
         "titlePadding": 10,
         "labelOffset": 13,
         "orient": "none",
-        "legendX":350
+        "legendX":350,
+        "legendY": 225,
+        "columns": 3
       },
       "scale": {
         "domain": [
