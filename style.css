@@ -15,6 +15,10 @@
   display: flex;
 }
 
+p{
+  text-align: left;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -67,8 +71,8 @@
 }
 
 .below2 .vega-bindings{
-  padding-top: 48px;
-  margin-left: 30px;
+  margin-top: -570px;
+  margin-left: 335px;
 }
 
 .outer .top {
@@ -80,8 +84,8 @@
 }
 
 .top2 .vega-bindings{
-  margin-left: 490px;
-  margin-top: -15px;
+  margin-left: 5px;
+  margin-top: -635px;
 }
 
 

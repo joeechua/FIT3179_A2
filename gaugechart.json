@@ -15,7 +15,6 @@
       "bind": {
         "input": "select",
         "options": [
-          null,
           "Micron Technology",
           "Facebook",
           "Amgen",
@@ -165,7 +164,6 @@
           "Kraft Heinz"
         ],
         "labels": [
-          "Overall",
           "Micron Technology",
           "Facebook",
           "Amgen",
@@ -368,7 +366,7 @@
             "legendX": -20,
             "legendY": 360,
             "direction": "horizontal",
-            "gradientLength": 365
+            "gradientLength": 345
           }
         },
         "tooltip": [
