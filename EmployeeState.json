@@ -47,7 +47,7 @@
         "titlePadding": 10,
         "labelOffset": 13,
         "orient": "none",
-        "legendX": 320,
+        "legendX": 323,
         "legendY": 0,
         "columns": 3
       },
@@ -80,10 +80,10 @@
   "transform": [
     {"filter": "year_selection == null || year_selection == datum.year"},
     {
-      "window": [{"op": "rank", "as": "rank"}],
+      "window": [{"op": "rank", "as": "ranks"}],
       "sort": [{"field": "employees", "order": "descending"}]
     },
-    {"filter": "datum.rank <= 10"}
+    {"filter": "datum.ranks <= 10"}
   ],
   "layer": [
     {
@@ -99,12 +99,21 @@
           },
           {"field": "year", "type": "nominal", "title": "Year Listed"},
           {"field": "sector", "type": "nominal", "title": "Sector"},
-          {"field": "hqstate"}
+          {"field": "hqstate", "type": "nominal", "title": "State"},
+          {"field": "rank", "type": "quantitative", "title": "Rank"}
         ]
       }
+    },
+    {
+      "mark": {"type": "text", "radiusOffset":25, "size": 17},
+      "encoding": {
+        "text":{
+          "field":"rank",
+          "type": "quantitative"
+        },
+        "color":{"value":"white"}
+        }
     }
   ],
-  "config": {
-    
-  }
+  "config": {}
 }
