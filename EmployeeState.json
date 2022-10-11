@@ -49,8 +49,7 @@
         "orient": "none",
         "legendX": 300,
         "legendY": 0,
-        "columns": 3,
-        "titleAlign": "right"
+        "columns": 3
       },
       "scale": {
         "domain": [

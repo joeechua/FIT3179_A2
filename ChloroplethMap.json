@@ -149,6 +149,12 @@
         "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
         "format": {"parse": {"profits": "number", "employees": "number"}}
       },
+      "params": [
+            {
+              "name": "highlight",
+              "select": {"type": "point", "on": "mouseover"}
+            }
+          ],
       "transform": [
         {
           "lookup": "hqstate",
@@ -186,9 +192,17 @@
         },
         {"calculate": "datum.perc_prof_per_emp *1000000", "as": "proft_per_emp"}
       ],
-      "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+      "mark": {"type": "geoshape", "stroke": "#fff"},
       "encoding": {
         "shape": {"field": "state", "type": "geojson"},
+        "strokeWidth": {
+              "condition": [{"param": "highlight", "empty": false, "value": 3}],
+              "value": 0.3
+            },
+        "opacity": {
+          "condition": {"param": "highlight", "value": 1},
+          "value": 0.7
+        },
         "color": {
           "field": "proft_per_emp",
           "type": "quantitative",
@@ -249,6 +263,9 @@
       ],
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
+        "fillOpacity":{
+          "value":0.8
+        },
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "size": {
@@ -267,10 +284,66 @@
         },
         "tooltip": [
           {"field": "State", "type": "nominal", "title": "States"},
-          {"field": "TotalRev", "type": "nominal", "title": "Revenues", "format":"$.2f"}
+          {
+            "field": "TotalRev",
+            "type": "nominal",
+            "title": "Revenues",
+            "format": "$.2f"
+          }
         ]
       }
-    }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_latlong.csv",
+        "format": {
+          "parse": {
+            "Revenues": "number",
+            "Longitude": "number",
+            "Latitude": "number"
+          }
+        }
+      },
+      "mark": {"type": "circle", "color":"orange", "size":50},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "opacity":{"condition":{
+          "test":"datum['State'] == 'New York' || datum['State'] == 'California'",
+          "value":1
+        },
+        "value":0}}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_latlong.csv",
+        "format": {
+          "parse": {
+            "Revenues": "number",
+            "Longitude": "number",
+            "Latitude": "number"
+          }
+        }
+      },
+      "mark": {
+          "type": "text",
+          "color": "orange",
+          "dy":-15,
+          "fontSize": 20
+        },
+        "encoding": {
+          "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+          "text": {"field": "State", "type": "nominal"},
+          "opacity": {
+            "condition": {
+              "test": "datum['State'] == 'New York' || datum['State'] == 'California'",
+              "value": 1
+            },
+            "value": 0
+          }
+        }
+      }
   ],
   "config": {}
 }
