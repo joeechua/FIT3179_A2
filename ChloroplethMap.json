@@ -175,6 +175,12 @@
           "groupby": ["hqstate"]
         },
         {
+          "joinaggregate": [
+            {"op": "sum", "field": "revenues", "as": "TotalRev"}
+          ],
+          "groupby": ["hqstate"]
+        },
+        {
           "calculate": "datum.TotalCount/datum.employees",
           "as": "perc_prof_per_emp"
         },
@@ -223,39 +229,48 @@
       }
     },
     {
-                "data": 
-                {
-                  "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_latlong.csv",
-                  "format":{"parse":{"Revenues":"number", "Longitude":"number", "Latitude":"number"}}
-                },
-                "mark": {"type": "circle", "tooltip": {"content": "data"}},
-                "encoding": {
-                  "longitude": {"field": "Longitude", "type": "quantitative"},
-                  "latitude": {"field": "Latitude", "type": "quantitative"},
-                  "size": {
-                    "field": "Revenues",
-                    "title":"Revenue",
-                    "type": "quantitative",
-                    "scale": {"domain": [0, 400000], "range": [100, 2500]},
-                    "legend": {
-                      "title": "Revenue",
-                      "titleFontSize":20,
-                      "direction":"horizontal", 
-                      "orient":"bottom", 
-                      "labelFontSize": 20,
-                      "titleLimit":1000
-
-                  }
-
-                    
-                  },
-                  
-                  "tooltip":[
-                    {"field":"State","type":"nominal","title":"States"},
-                    {"field":"Revenues","type":"nominal","title":"Revenues"}
-
-                  ]
-                }}
+      "data": {
+        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_latlong.csv",
+        "format": {
+          "parse": {
+            "Revenues": "number",
+            "Longitude": "number",
+            "Latitude": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "joinaggregate": [
+            {"op": "sum", "field": "Revenues", "as": "TotalRev"}
+          ],
+          "groupby": ["State"]
+        }
+      ],
+      "mark": {"type": "circle", "tooltip": {"content": "data"}},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "size": {
+          "field": "TotalRev",
+          "title": "Revenue",
+          "type": "quantitative",
+          "scale": {"domain": [0, 4000000], "range": [100, 2500]},
+          "legend": {
+            "title": "Revenue",
+            "titleFontSize": 20,
+            "direction": "horizontal",
+            "orient": "bottom",
+            "labelFontSize": 20,
+            "titleLimit": 1000
+          }
+        },
+        "tooltip": [
+          {"field": "State", "type": "nominal", "title": "States"},
+          {"field": "TotalRev", "type": "nominal", "title": "Revenues", "format":"$.2f"}
+        ]
+      }
+    }
   ],
   "config": {}
 }

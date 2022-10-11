@@ -48,7 +48,7 @@
         "labelOffset": 13,
         "orient": "none",
         "legendX": -660,
-        "legendY": 210,
+        "legendY": 0,
         "columns": 2
       },
       "scale": {
