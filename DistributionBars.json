@@ -16,10 +16,6 @@
         "labels": ["2019-2021", "2019", "2020", "2021"],
         "name": "Select Year: "
       }
-    },
-    {
-      "name": "brush",
-      "select": {"type": "interval", "encodings": ["x"]}
     }
   ],
   "transform": [
@@ -30,17 +26,35 @@
       "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv"
     },
     "layer": [
-      {"mark": "bar",
-    "encoding": {
-      "opacity": {"value": 0.85},
-      "x": {
-        "field": {"repeat": "repeat"},
-        "bin": {"maxbins": 15, "extent": {"param": "brush"}},
-        "axis": {"labelFontSize": 15, "title":"Number of Companies"}
+      {
+        "mark": "bar",
+        "encoding": {
+          "opacity": {"value": 0.85},
+          "x": {
+            "field": {"repeat": "repeat"},
+            "bin": {"maxbins": 15},
+            "axis": {"labelFontSize": 15}
+          },
+          "y": {"aggregate": "count", "axis": {"grid": false,"title": "Number of Companies"}},
+          "color": {"bin":{"maxbins": 15}, "field":{"repeat": "repeat"}, "scale":{"domain":[-30000, 0, 600000], "range":["#BF0A30", "#002868"]},
+          "legend": null}
+        }
       },
-      "y": {"aggregate": "count", "axis": {"grid": false}},
-      "color": {"value": "#960018"}
-    }}
+      {
+        "mark": {"type": "text", "dy": -10, "size":13},
+        "encoding": {
+          "opacity": {"value": 1},
+          "x": {
+            "field": {"repeat": "repeat"},
+            "bin": {"maxbins": 15},
+            "axis": {"labelFontSize": 15}
+          },
+          "y": {"aggregate": "count", "axis": {"grid": false}},
+          "text":{
+            "aggregate": "count"
+          },
+          "color": {"value":"black"}}
+      }
     ],
     "height": 250,
     "width": 610
