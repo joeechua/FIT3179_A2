@@ -370,9 +370,9 @@
           }
         },
         "tooltip": [
-          {"field": "expenses"},
-          {"field": "profits"},
-          {"field": "revenues"}
+          {"field": "expenses", "type": "quantitative", "format": "$.0f", "title": "Expenses (Million Dollars)"},
+          {"field": "profits", "type": "quantitative", "format": "$.0f", "title": "Profits (Million Dollars)"},
+          {"field": "revenues", "type": "quantitative", "format": "$.0f", "title": "Revenues (Million Dollars)"}
         ]
       }
     },

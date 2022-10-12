@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>FIT 3179 A2</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -13,11 +13,11 @@
 </head>
 <body>
   <center><div class="page">
-    <div class="header" style="margin-top: 10; padding-left: 40px;">
+    <div class="header" style="margin-top: 10; padding-left: 50px;">
       <h1>
         <br>
-        <span class="word" style="font-size:50px; color:#BF0A30; font-weight: bold;">American</span>
-        <span class="word" style="font-size:50px; color:#002868; font-weight: bold;">Fortune</span><br>
+        <span class="word" style="font-size:65px; color:#BF0A30; font-weight: bold;">American</span>
+        <span class="word" style="font-size:65px; color:#002868; font-weight: bold;">Fortune</span><br>
         <span class="word" style="font-size:25px; font-weight:200;">BREAKING DOWN THE FORTUNE 500 COMPANIES IN AMERICA BY STATE, SECTOR, FINANCES, AND LEADERSHIP</span>
       </h1>
     </div>
@@ -33,6 +33,7 @@
         <p style="font-size:20px;">Let's see how this landscape breaksdown by state, sector, finances, and leadership</p>
       </div>
     </div>
+    <div style="text-align: left; padding-left:50px; font-size:small;"><i>Note: All values for profits and revenues are shown in million dollars. <b>(500k = 500k million dollars)</b></i></div>
     <br>
     <div class="row" style="padding-left: 40px;">
       <div class="outer" style="width: 100%;">
@@ -59,10 +60,10 @@
     <center><div class="row" style="display: flex; justify-content: center; margin-top: 30px; font-size: 30px;">
       <p><b>TOP 10 COMPANIES</b>, SORTED</p>
     </div></center>
-    <!-- <div style="padding-left:0px;padding-top:50px; font-size:20px; font-weight: 700;">
-      <div class="column" style="text-align:right; ">BY NUMBER OF EMPLOYEES</div>
-      <div class="column" style="max-width:150px;">BY PROFIT</div>
-    </div> -->
+    <div class="outer" style="padding-left: 50px; font-size: 25px; margin-top: 30px;">
+      <div class="top" style="margin-right: 900px;">BY PROFIT</div>
+      <div class="below" style="margin-left: 720px;">BY NUMBER OF EMPLOYEES</div>
+    </div>
     <center>
     <div class="row" style="padding-top: 105px;">
       <div id="vis6" class="top2" style="margin-left:35px; margin-top:-48px"></div>
@@ -71,13 +72,13 @@
   </center>
     <p style="margin-top:150px; margin-right:1100px; max-width:275px"><i><b>Note:</b> Meta platforms has been merged into one with Facebook for the purposes of this visualisation</i></p>
     <p style="margin-top:60px; margin-right:1100px; max-width:275px">Throughout the pandemic, <b>Apple</b> held strong as a top performer amongst all companies</p>
-    <p style="margin-top:-315px; margin-left:960px; max-width:350px">From years 2019 to 2021, the number of Walmart stores increased from 11361 to 11413 which contributed to the addition 1 million employees</p>
+    <p style="margin-top:-315px; margin-left:960px; max-width:350px">From years 2019 to 2021, the number of <b>Walmart</b> stores increased from <b>11361</b> to <b>11413</b> which contributed to the addition  of 1 million employees</p>
     <p style="margin-top:60px; margin-left:960px; max-width:350px"><b>Amazon</b> also saw a huge boom in employees even in the midst of a labour union crisis</p>
     
     <center style=" padding-top: 180px;"><span style="font-size: 30px; font-weight:bold;">OVERSPENDING ?</span> </center>
     <div class="row" style="margin-top: 20px;">
       <div style="margin-left: 20px; margin-top:0px; padding-right:0px; max-width: 500px;">
-        <p style="padding-top: 60px;">the <i>efficiency ratio</i><b>*</b> is a measure of the companies spendings. Companies usually aim for the sweet-spot of <b>60-80%</b>
+        <p style="padding-top: 60px;">The <i>efficiency ratio</i><b>*</b> is a measure of the companies spendings. Companies usually aim for the sweet-spot of <b>60-80%</b>
         but more often than not, fail.</p>
         <br>
         <p>The lower the efficiency ratio, the higher a company's profits. Curious to see if your favourite company succeeds?</p>
@@ -97,7 +98,7 @@
     <br>
     <center><span style="font-size: 30px; font-weight:bold;">PROFITS AND REVENUES BY STATE</span></center>
     <div class="row">
-      <div class="outer" style="padding-top: 50px;">
+      <div class="outer" style="padding-top: 10px;">
         <div id="vis" class="topmap" style="padding-left:280px;"></div>
         <!-- WEST COAST -->
         <div style="width:30px; height:30px; margin-left:350px; margin-top:210px;" class="below">
@@ -147,53 +148,53 @@
 
 <script type="text/javascript">
 
-var spec = "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/ChloroplethMap.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/js/ChloroplethMap.json";
 
       vegaEmbed('#vis', spec).then(function(result) {
       }).catch(console.error);
 
-var spec = "https://joeechua.github.io/FIT3179_A2/CEOIsotype.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/js/CEOIsotype.json";
 
       vegaEmbed('#vis2', spec).then(function(result) {
       }).catch(console.error);
 
-var spec = "https://joeechua.github.io/FIT3179_A2/Top10US.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/js/Top10US.json";
 
 vegaEmbed('#vis3', spec).then(function(result) {
 }).catch(console.error);
 
-var spec = "https://joeechua.github.io/FIT3179_A2/gaugechart.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/js/gaugechart.json";
 
 vegaEmbed('#vis4', spec).then(function(result) {
 }).catch(console.error);
 
-var spec = "https://joeechua.github.io/FIT3179_A2/DistributionBars.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/js/DistributionBars.json";
 
 vegaEmbed('#vis5', spec).then(function(result) {
 }).catch(console.error);
 
 
-var spec = "https://joeechua.github.io/FIT3179_A2/EmployeeSector.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/js/EmployeeSector.json";
 
 vegaEmbed('#vis6', spec).then(function(result) {
 }).catch(console.error);
 
-var spec = "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/EmployeeState.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/js/EmployeeState.json";
 
 vegaEmbed('#vis7', spec).then(function(result) {
 }).catch(console.error);
 
-var spec = "https://joeechua.github.io/FIT3179_A2/Top10BarNoLogo.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/js/Top10BarNoLogo.json";
 
 vegaEmbed('#vis8', spec).then(function(result) {
 }).catch(console.error);
 
-var spec = "https://joeechua.github.io/FIT3179_A2/Top10ProfitsPie.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/js/Top10ProfitsPie.json";
 
 vegaEmbed('#vis9', spec).then(function(result) {
 }).catch(console.error);
 
-var spec = "https://joeechua.github.io/FIT3179_A2/SectorRev.json";
+var spec = "https://joeechua.github.io/FIT3179_A2/js/SectorRev.json";
 
 vegaEmbed('#vis10', spec).then(function(result) {
 }).catch(console.error);

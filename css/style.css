@@ -52,6 +52,15 @@ p{
   width: 50%;
 }
 
+.column3 {
+  float: right;
+  width: 45%;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
 .outer {
   display: grid;
   grid-template: 1fr / 1fr;
@@ -196,9 +205,6 @@ body {
   display: flex;
 }
 
-.column {
-  flex: 50%;
-}
 
 .end{
   line-height: 27pt;
