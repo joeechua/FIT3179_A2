@@ -34,6 +34,8 @@ p{
     background-color:beige;
     margin: 0;
     font-family: 'Poppins';
+    border: #002868;
+    border-width: 2px;
   }
 
 .column {
