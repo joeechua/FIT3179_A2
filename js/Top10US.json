@@ -6,7 +6,7 @@
   "title": null,
   "description": "Google's stock price over time.",
   "data": {
-    "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
+    "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/data/fortune_500_USA.csv",
     "format": {"parse": {"year": "number", "profits": "number"}}
   },
   "params": [

@@ -127,7 +127,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/joeechua/W9_HW/main/US_MAP.json",
+        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/data/US_MAP.json",
         "format": {"type": "topojson", "feature": "US_States_SOVI_Infographics"}
       },
       "transform": [
@@ -146,7 +146,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_500_USA.csv",
+        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/data/fortune_500_USA.csv",
         "format": {"parse": {"profits": "number", "employees": "number"}}
       },
       "params": [
@@ -160,7 +160,7 @@
           "lookup": "hqstate",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/joeechua/W9_HW/main/US_MAP.json",
+              "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/data/US_MAP.json",
               "format": {
                 "type": "topojson",
                 "feature": "US_States_SOVI_Infographics"
@@ -244,7 +244,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_latlong.csv",
+        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/data/fortune_latlong.csv",
         "format": {
           "parse": {
             "Revenues": "number",
@@ -295,7 +295,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_latlong.csv",
+        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/data/fortune_latlong.csv",
         "format": {
           "parse": {
             "Revenues": "number",
@@ -316,7 +316,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/fortune_latlong.csv",
+        "url": "https://raw.githubusercontent.com/joeechua/FIT3179_A2/main/data/fortune_latlong.csv",
         "format": {
           "parse": {
             "Revenues": "number",
