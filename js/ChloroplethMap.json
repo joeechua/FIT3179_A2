@@ -150,11 +150,8 @@
         "format": {"parse": {"profits": "number", "employees": "number"}}
       },
       "params": [
-            {
-              "name": "highlight",
-              "select": {"type": "point", "on": "mouseover"}
-            }
-          ],
+        {"name": "highlight", "select": {"type": "point", "on": "mouseover"}}
+      ],
       "transform": [
         {
           "lookup": "hqstate",
@@ -196,9 +193,9 @@
       "encoding": {
         "shape": {"field": "state", "type": "geojson"},
         "strokeWidth": {
-              "condition": [{"param": "highlight", "empty": false, "value": 3}],
-              "value": 0.3
-            },
+          "condition": [{"param": "highlight", "empty": false, "value": 3}],
+          "value": 0.3
+        },
         "opacity": {
           "condition": {"param": "highlight", "value": 1},
           "value": 0.7
@@ -208,12 +205,12 @@
           "type": "quantitative",
           "legend": {
             "title": "Total Profits in 100 Million USD",
-            "titleFontSize": 11,
+            "titleFontSize": 18,
             "titleAnchor": "start",
             "direction": "vertical",
             "orient": "none",
             "legendX": 820,
-            "labelFontSize": 10,
+            "labelFontSize": 15,
             "titleLimit": 1000
           },
           "scale": {
@@ -238,7 +235,11 @@
             "title": "Total Profit (Million Dollars)",
             "format": "$.0f"
           },
-          {"field": "proft_per_emp", "format": "$.0f", "title": "Profit per Employee"}
+          {
+            "field": "proft_per_emp",
+            "format": "$.0f",
+            "title": "Profit per Employee"
+          }
         ]
       }
     },
@@ -263,9 +264,7 @@
       ],
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
-        "fillOpacity":{
-          "value":0.8
-        },
+        "fillOpacity": {"value": 0.8},
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "size": {
@@ -275,10 +274,10 @@
           "scale": {"domain": [0, 4000000], "range": [100, 2500]},
           "legend": {
             "title": "Revenue",
-            "titleFontSize": 20,
+            "titleFontSize": 18,
             "direction": "horizontal",
             "orient": "bottom",
-            "labelFontSize": 20,
+            "labelFontSize": 15,
             "titleLimit": 1000
           }
         },
@@ -304,15 +303,18 @@
           }
         }
       },
-      "mark": {"type": "circle", "color":"orange", "size":50},
+      "mark": {"type": "circle", "color": "orange", "size": 50},
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
-        "opacity":{"condition":{
-          "test":"datum['State'] == 'New York' || datum['State'] == 'California'",
-          "value":1
-        },
-        "value":0}}
+        "opacity": {
+          "condition": {
+            "test": "datum['State'] == 'New York' || datum['State'] == 'California'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
     },
     {
       "data": {
@@ -325,25 +327,20 @@
           }
         }
       },
-      "mark": {
-          "type": "text",
-          "color": "orange",
-          "dy":-15,
-          "fontSize": 20
-        },
-        "encoding": {
-          "longitude": {"field": "Longitude", "type": "quantitative"},
+      "mark": {"type": "text", "color": "orange", "dy": -15, "fontSize": 20},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
-          "text": {"field": "State", "type": "nominal"},
-          "opacity": {
-            "condition": {
-              "test": "datum['State'] == 'New York' || datum['State'] == 'California'",
-              "value": 1
-            },
-            "value": 0
-          }
+        "text": {"field": "State", "type": "nominal"},
+        "opacity": {
+          "condition": {
+            "test": "datum['State'] == 'New York' || datum['State'] == 'California'",
+            "value": 1
+          },
+          "value": 0
         }
       }
+    }
   ],
   "config": {}
 }

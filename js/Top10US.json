@@ -104,7 +104,9 @@
         "columns": 2,
         "orient": "none",
         "legendX":1100,
-        "legendY":270
+        "legendY":270,
+        "labelFontSize":15,
+        "titleFontSize": 18
       }
     }
   }
