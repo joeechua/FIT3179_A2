@@ -79,6 +79,14 @@ p{
   z-index: 1;
 }
 
+.outer .topmap {
+  z-index: 1;
+}
+
+.topmap .vega-bindings{
+  margin-left: 58px;
+}
+
 .outer .top2 {
   z-index: 1;
 }

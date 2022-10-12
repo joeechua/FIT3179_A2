@@ -363,7 +363,7 @@
           "legend": {
             "orient": "none",
             "title": "Efficiency Ratio",
-            "legendX": -20,
+            "legendX": 0,
             "legendY": 360,
             "direction": "horizontal",
             "gradientLength": 345
