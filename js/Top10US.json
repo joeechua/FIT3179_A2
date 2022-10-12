@@ -54,8 +54,8 @@
     },
     "detail": {"field": "name", "type": "nominal"},
     "tooltip": [
-      {"field": "name"},
-      {"field": "revenues"},
+      {"field": "name", "title":"Name"},
+      {"field": "revenues", "title":"Revenue (Million Dollars)"},
       {"field": "rank", "title": "Overall Rank"},
       {"field": "r", "title": "US Rank"}
     ],

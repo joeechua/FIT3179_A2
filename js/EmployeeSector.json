@@ -77,7 +77,9 @@
             "title": "Number of Employees"
           },
           {"field": "year", "type": "nominal", "title": "Year Listed"},
-          {"field": "sector", "type": "nominal", "title": "Sector"}
+          {"field": "sector", "type": "nominal", "title": "Sector"},
+          {"field": "hqstate", "type": "nominal", "title": "State"},
+          {"field": "rank", "type": "quantitative", "title": "Rank"}
         ]
       }
     },

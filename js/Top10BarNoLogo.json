@@ -62,9 +62,9 @@
         "opacity": {"value": 0.88},
         "stroke": {"value": "black"},
         "tooltip":[
-          {"field":"revenues"},
-          {"field":"sector"},
-          {"field":"name"}
+          {"field":"revenues", "type": "quantitative", "title": "Revenue (Million Dollars)"},
+          {"field":"sector", "type": "nominal", "title": "Sector"},
+          {"field":"name", "type": "nominal", "title": "Sector"}
         ],
         "color": {
           "field": "name",
