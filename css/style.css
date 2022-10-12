@@ -31,7 +31,7 @@ p{
 /* Layout */
 .page {
     width: 1450px;
-    background-color:white;
+    background-color:beige;
     margin: 0;
     font-family: 'Poppins';
   }
@@ -60,6 +60,11 @@ p{
   margin-right: 50px;
   margin-bottom: 10px;
 }
+
+.horizontalLine {  
+  border: none; 
+  border-bottom: 2px solid #002868;  
+ }
 
 .outer {
   display: grid;
