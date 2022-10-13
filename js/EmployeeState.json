@@ -48,7 +48,7 @@
         "labelOffset": 13,
         "orient": "none",
         "legendX": 323,
-        "legendY": 0,
+        "legendY": 120,
         "columns": 3
       },
       "scale": {
@@ -64,7 +64,7 @@
           "Washington"
         ],
         "range": [
-          "#CC092F",
+          "#002868",
           "#E91436",
           "#002D56",
           "#3D68C9",

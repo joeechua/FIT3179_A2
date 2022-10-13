@@ -410,66 +410,66 @@
     {
       "mark": {
         "type": "text",
-        "x": -30,
+        "x": -20,
         "y": 480,
         "text": "0",
         "fontWeight": "bold",
-        "fontSize": 55,
+        "fontSize": 35,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 510,
+        "x": 480,
         "y": 480,
         "text": "100",
         "fontWeight": "bold",
-        "fontSize": 55,
+        "fontSize": 35,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": -95,
+        "x": -80,
         "y": 250,
         "text": "20",
         "fontWeight": "bold",
-        "fontSize": 55,
+        "fontSize": 35,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 40,
+        "x": 60,
         "y": 40,
         "text": "40",
         "fontWeight": "bold",
-        "fontSize": 55,
+        "fontSize": 35,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 545,
+        "x": 530,
         "y": 250,
         "text": "80",
         "fontWeight": "bold",
-        "fontSize": 55,
+        "fontSize": 35,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 405,
+        "x": 385,
         "y": 40,
         "text": "60",
         "fontWeight": "bold",
-        "fontSize": 55,
+        "fontSize": 35,
         "color": "black"
       }
     },
@@ -488,7 +488,7 @@
       "mark": {
         "type": "point",
         "x": -7,
-        "y":260,
+        "y": 260,
         "angle": -80,
         "shape": "M 0 -10 L 0 -1 L 0 -1",
         "size": 100
@@ -542,13 +542,13 @@
     {
       "mark": {
         "type": "text",
-        "x": 190,
+        "x": 210,
         "y": 470,
         "text": {
           "expr": "company_selection == null ? 10: round(datum.company_exp)"
         },
         "fontWeight": "bold",
-        "fontSize": 100,
+        "fontSize": 80,
         "color": "black"
       }
     },
@@ -559,7 +559,7 @@
         "y": 467,
         "text": "%",
         "fontWeight": "bold",
-        "fontSize": 70,
+        "fontSize": 60,
         "color": "black"
       }
     }
