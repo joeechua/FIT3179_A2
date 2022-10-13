@@ -87,7 +87,7 @@ p{
 }
 
 .below2 .vega-bindings{
-  margin-top: -570px;
+  margin-top: -490px;
   margin-left: 330px;
 }
 
@@ -109,7 +109,11 @@ p{
 
 .top2 .vega-bindings{
   margin-left: 5px;
-  margin-top: -635px;
+  margin-top: -555px;
+}
+
+.buffer .vega-bindings{
+  margin-left: 80px;
 }
 
 

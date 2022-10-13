@@ -363,10 +363,12 @@
           "legend": {
             "orient": "none",
             "title": "Efficiency Ratio",
-            "legendX": 10,
+            "legendX": -30,
             "legendY": 540,
             "direction": "horizontal",
-            "gradientLength": 425
+            "gradientLength": 485,
+            "labelFontSize":16,
+            "titleFontSize": 18
           }
         },
         "tooltip": [
