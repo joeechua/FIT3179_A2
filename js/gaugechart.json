@@ -366,7 +366,7 @@
             "legendX": -30,
             "legendY": 540,
             "direction": "horizontal",
-            "gradientLength": 485,
+            "gradientLength": 500,
             "labelFontSize":16,
             "titleFontSize": 18
           }
