@@ -3,6 +3,7 @@
     "description": "A simple pie chart with embedded data.",
     "width":150,
     "height":150,
+    "background":null,
     "data": {
       "values": [
         {"category": 1, "value": 948765},
@@ -24,4 +25,3 @@
     }},
     {"mark":{"type": "text", "x":75, "y":75,  "text":"Top 10", "fontWeight":"bold", "fontSize":20, "color":"black"}}]
   }
-  

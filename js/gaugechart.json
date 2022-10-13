@@ -6,8 +6,8 @@
     "format": {"parse": {"profits": "number", "revenues": "number"}}
   },
   "title": null,
-  "width": 350,
-  "height": 400,
+  "width": 450,
+  "height": 600,
   "background": null,
   "params": [
     {
@@ -337,8 +337,8 @@
         "type": "arc",
         "theta": -2.28,
         "theta2": 2.28,
-        "radius": 120,
-        "innerRadius": 185
+        "radius": 190,
+        "innerRadius": 285
       },
       "encoding": {"fill": {"value": "lightgrey"}}
     },
@@ -346,8 +346,8 @@
       "mark": {
         "type": "arc",
         "theta": -2.28,
-        "radius": 120,
-        "innerRadius": 185,
+        "radius": 190,
+        "innerRadius": 285,
         "theta2": {"expr": "company_selection == null ? -1.8 : datum.rpe_rad"}
       },
       "encoding": {
@@ -363,24 +363,39 @@
           "legend": {
             "orient": "none",
             "title": "Efficiency Ratio",
-            "legendX": 0,
-            "legendY": 360,
+            "legendX": 10,
+            "legendY": 540,
             "direction": "horizontal",
-            "gradientLength": 345
+            "gradientLength": 425
           }
         },
         "tooltip": [
-          {"field": "expenses", "type": "quantitative", "format": "$.0f", "title": "Expenses (Million Dollars)"},
-          {"field": "profits", "type": "quantitative", "format": "$.0f", "title": "Profits (Million Dollars)"},
-          {"field": "revenues", "type": "quantitative", "format": "$.0f", "title": "Revenues (Million Dollars)"}
+          {
+            "field": "expenses",
+            "type": "quantitative",
+            "format": "$.0f",
+            "title": "Expenses (Million Dollars)"
+          },
+          {
+            "field": "profits",
+            "type": "quantitative",
+            "format": "$.0f",
+            "title": "Profits (Million Dollars)"
+          },
+          {
+            "field": "revenues",
+            "type": "quantitative",
+            "format": "$.0f",
+            "title": "Revenues (Million Dollars)"
+          }
         ]
       }
     },
     {
       "mark": {
         "type": "point",
-        "x": 175,
-        "y": 199,
+        "x": 222.5,
+        "y": 300,
         "angle": {
           "expr": "company_selection == null ? -104: datum.rpe_angle - 130"
         },
@@ -389,156 +404,162 @@
       "encoding": {
         "color": {"value": "black"},
         "fill": {"value": "black"},
-        "size": {"value": 5}
+        "size": {"value": 18}
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 70,
-        "y": 290,
+        "x": -30,
+        "y": 480,
         "text": "0",
         "fontWeight": "bold",
-        "fontSize": 25,
+        "fontSize": 55,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 270,
-        "y": 290,
+        "x": 510,
+        "y": 480,
         "text": "100",
         "fontWeight": "bold",
-        "fontSize": 25,
+        "fontSize": 55,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 35,
-        "y": 180,
+        "x": -95,
+        "y": 250,
         "text": "20",
         "fontWeight": "bold",
-        "fontSize": 25,
+        "fontSize": 55,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 90,
-        "y": 85,
+        "x": 40,
+        "y": 40,
         "text": "40",
         "fontWeight": "bold",
-        "fontSize": 25,
+        "fontSize": 55,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 310,
-        "y": 180,
+        "x": 545,
+        "y": 250,
         "text": "80",
         "fontWeight": "bold",
-        "fontSize": 25,
+        "fontSize": 55,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 250,
-        "y": 85,
+        "x": 405,
+        "y": 40,
         "text": "60",
         "fontWeight": "bold",
-        "fontSize": 25,
+        "fontSize": 55,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "point",
-        "x": 56,
-        "y": 302,
+        "x": 46,
+        "y": 454,
         "angle": -130,
-        "shape": "M 0 -10 L 0 -1 L 0 -1"
+        "shape": "M 0 -10 L 0 -1 L 0 -1",
+        "size": 100
       },
       "encoding": {"color": {"value": "black"}}
     },
     {
       "mark": {
         "type": "point",
-        "x": -10,
-        "y": 170,
-        "angle": 100,
-        "shape": "M 0 -10 L 0 -1 L 0 -1"
+        "x": -7,
+        "y":260,
+        "angle": -80,
+        "shape": "M 0 -10 L 0 -1 L 0 -1",
+        "size": 100
       },
       "encoding": {"color": {"value": "black"}}
     },
     {
       "mark": {
         "type": "point",
-        "x": 360,
-        "y": 170,
-        "angle": -100,
-        "shape": "M 0 -10 L 0 -1 L 0 -1"
+        "x": 456,
+        "y": 260,
+        "angle": 80,
+        "shape": "M 0 -10 L 0 -1 L 0 -1",
+        "size": 100
       },
       "encoding": {"color": {"value": "black"}}
     },
     {
       "mark": {
         "type": "point",
-        "x": 295,
-        "y": 302,
+        "x": 405,
+        "y": 454,
         "angle": 130,
-        "shape": "M 0 -10 L 0 -1 L 0 -1"
+        "shape": "M 0 -10 L 0 -1 L 0 -1",
+        "size": 100
       },
       "encoding": {"color": {"value": "black"}}
     },
     {
       "mark": {
         "type": "point",
-        "x": 286,
-        "y": 50,
-        "angle": -140,
-        "shape": "M 0 -10 L 0 -1 L 0 -1"
+        "x": 380,
+        "y": 56,
+        "angle": -145,
+        "shape": "M 0 -10 L 0 -1 L 0 -1",
+        "size": 100
       },
       "encoding": {"color": {"value": "black"}}
     },
     {
       "mark": {
         "type": "point",
-        "x": 60,
-        "y": 50,
-        "angle": 140,
-        "shape": "M 0 -10 L 0 -1 L 0 -1"
+        "x": 70,
+        "y": 56,
+        "angle": 145,
+        "shape": "M 0 -10 L 0 -1 L 0 -1",
+        "size": 100
       },
       "encoding": {"color": {"value": "black"}}
     },
     {
       "mark": {
         "type": "text",
-        "x": 155,
-        "y": 300,
+        "x": 190,
+        "y": 470,
         "text": {
           "expr": "company_selection == null ? 10: round(datum.company_exp)"
         },
         "fontWeight": "bold",
-        "fontSize": 60,
+        "fontSize": 100,
         "color": "black"
       }
     },
     {
       "mark": {
         "type": "text",
-        "x": 205,
-        "y": 298,
+        "x": 275,
+        "y": 467,
         "text": "%",
         "fontWeight": "bold",
-        "fontSize": 40,
+        "fontSize": 70,
         "color": "black"
       }
     }
