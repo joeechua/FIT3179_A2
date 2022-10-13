@@ -163,7 +163,7 @@
           "field": "proft_per_emp",
           "type": "quantitative",
           "legend": {
-            "title": "Total Profits in 100 Million USD",
+            "title": "Profit Per Employee",
             "titleFontSize": 18,
             "titleAnchor": "start",
             "direction": "vertical",
