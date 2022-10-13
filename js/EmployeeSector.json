@@ -17,7 +17,7 @@
         "labels": ["2019", "2020", "2021"],
         "name": "Select Year: "
       },
-      "value": "2021"
+      "value": "2019"
     }
   ],
   "transform": [
@@ -48,7 +48,7 @@
         "labelOffset": 13,
         "orient": "none",
         "legendX": -660,
-        "legendY": 120,
+        "legendY": 100,
         "columns": 2
       },
       "scale": {
@@ -130,6 +130,19 @@
         "height": 50,
         "x": -300,
         "y": 270
+      },
+      "encoding": {
+        "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://joeechua.github.io/FIT3179_A2/images/exnnonmobil.png",
+        "width": 115,
+        "height": 85,
+        "x": -165,
+        "y": 15
       },
       "encoding": {
         "opacity": {"value": {"expr": "year_selection == 2019 ? 1:0"}}
