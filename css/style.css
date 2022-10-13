@@ -153,28 +153,6 @@ body {
    -ms-transform: rotate(165deg);  
        transform: rotate(165deg); 
 }
-
-
-/* THE UP BUTTOn */
-#upButton {
-	display: none;
-	position: fixed;
-	bottom: 70px;
-	right: 60px;
-	z-index: 60;
-	font-size: 20px;
-	border: none;
-	outline: none;
-	background-color: rgb(238, 238, 238);
-	color: black;
-	cursor: pointer;
-	padding: 12.5px;
-	border-radius: 25px;
-}
-#upButton:hover {
-	background-color: rgb(163, 163, 163);
-}
-
   
 
 /* Top of the page */
@@ -202,14 +180,6 @@ body {
     color:#FF0000;
     line-height: 0%;
   }
-
-
-
-.sect-desc{
-  text-align: justify;
-  font-size: 25px;
-  
-}
 
 
 .row {
